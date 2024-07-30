@@ -1,0 +1,24 @@
+body, html, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(114, 128, 255, 0.1) 0%, rgba(255,255,255,0) 50%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 80%;
+    z-index: 9999; /* Ensure it stays above all content */
+}
+
+.img-fluid.double-size {
+    width: 60%;  /* Adjust according to your preference */
+    height: auto; /* Maintain aspect ratio */
+}
