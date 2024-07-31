@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './AboutCard.css'; // Import the CSS file
+import './ProjectCard.css'; // Import the CSS file
 
-const AboutCard = ({ description, image, scale, badges }) => {
+const AboutCard = ({description, image, scale, badges }) => {
     // Use object for multiple style changes
     const [style, setStyle] = useState({
         backgroundColor: 'rgba(247, 247, 247, 0.05)', // Fully transparent
@@ -11,7 +11,8 @@ const AboutCard = ({ description, image, scale, badges }) => {
     const handleMouseEnter = () => {
         setStyle({
             backgroundColor: 'rgba(247, 247, 247, 0.1)', // Semi-transparent white for the matte effect
-            boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)' // Subtle shadow for depth
+            boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+            borderColor: 'rgba(247, 247, 247, 0.1)' // Subtle shadow for depth
         });
     };
 
@@ -37,7 +38,7 @@ const AboutCard = ({ description, image, scale, badges }) => {
             className="card m-1"
             style={{
                 width: '20rem',
-                transition: 'all 0.8s', // Smooth transition for all properties
+                transition: 'all 0.5s', // Smooth transition for all properties
                 ...style // Spread the style object here
             }}
             onMouseEnter={handleMouseEnter}
@@ -49,7 +50,7 @@ const AboutCard = ({ description, image, scale, badges }) => {
                         src={image}
                         className="card-img-top"
                         alt="Card Image"
-                        style={{ transform: `scale(${scale})` }}
+                        style={{ transform: `scale(${scale})`, marginLeft: '1rem'}}
                     />
                 </div>
                 <div className="col">

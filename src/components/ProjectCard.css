@@ -1,0 +1,33 @@
+.custom-badge {
+    background-color: #014c678c; /* Custom background color */
+    color: #00ccff; /* Custom text color */
+    margin-left: 1px;
+    font-weight: lighter;
+}
+
+.custom-text-secondary{
+    color:  #94979e; /* Custom text color */
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.custom-text-secondary-2{
+    color:  #94979e; /* Custom text color */
+    font-weight: lighter;
+    font-size: 13.5px;
+}
+
+.custom-text-primary{
+    color: #ffffff; /* Custom text color */
+    font-weight: lighter;
+}
+
+.custom-text-primary-1{
+    color: #ffffff; /* Custom text color */
+    font-weight: lighter;
+}
+
+.custom-text-primary-2{
+    color: #00ccff; /* Custom text color */
+    font-weight: lighter;
+}
