@@ -23,7 +23,15 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=16gHF6Bqt6fsXTI3A0IAfLlp0dhzH5pCy",
         scale: 1,
         badges: ['react-native', 'javascript', 'firestore', 'firebase-authentication' ,'google-maps api'],
-    }
+    },
+    {
+        title: 'Intellimate Voice Assistant',
+        description:  "The voice management component of intellimate robot, which identifies user emotions from their voice and responds accordingly. The project utilizes a Node.js server to handle external APIs like speech-to-text and emotion detection, reducing latency and dependency on user's Wi-Fi.",
+        image: "https://drive.google.com/thumbnail?id=1ORopuoU-H9JHoewhbw7XaLypkL5LSUl2",
+        scale: 1.15,
+        badges: ['esp32', 'i2c/i2s protocol', 'wifi', 'nodejs', 'chatgpt api', 'google cloud console', 'speech-to-text', 'text-to-speech','emotion prediction api'],
+        link:"https://youtu.be/EcGdtz8JKoo"
+    },
 ];
 
 export default projectData;
