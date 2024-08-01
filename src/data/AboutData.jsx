@@ -43,7 +43,8 @@ const aboutData = [
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Upwork.',
         image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
         scale: 1,
-    }
+    },
+    
 ];
 
 export default aboutData;

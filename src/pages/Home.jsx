@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import './Home.css';  // Import the CSS file
 import AboutCard from '../components/AboutCard';
 import ProjectCard from '../components/ProjectCard';
@@ -36,7 +36,7 @@ const about3 = (
 // Create a new component to track visibility
 const VisibleDiv = ({ id, children, handleVisibilityChange }) => {
     const { ref, inView } = useInView({
-        threshold: 0.5, 
+        threshold: 0.25, 
     });
 
     React.useEffect(() => {
@@ -89,14 +89,6 @@ class Home extends Component {
     handleVisibilityChange = (id) => {
         this.setState({ currentID: id });
     }
-
-    scrollTo = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-
     render() {
         const { currentID } = this.state;
         return (
@@ -116,7 +108,7 @@ class Home extends Component {
                     <div className="mt-5"/>
 
                     <div id="list-example">
-                    <a className="list-group-item list-group-item-action mb-2" href="#list-item-1" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}} onClick={() => this.scrollTo('list-item-1')}>- About</a>
+                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-1" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>- About</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-2" style={currentID==='list-item-2'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Background</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-4" style={currentID==='list-item-4'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Contact</a>
@@ -146,7 +138,7 @@ class Home extends Component {
                 </div>
                 
                 <div className="container-fluid col-sm-5 offset-sm-5 right-column" style={{ height: "100vh", overflowY: 'auto' }}>
-                    <div className="scrollspy-example row" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabIndex="0">
+                    <div className="scrollspy-example row" data-bs-spy="scroll" data-bs-target="#list-example"  tabIndex="0">
 
                     <div className='d-md-none text-center'>
                     <h1 className='mt-5'>Nimsara Paramulla</h1>
@@ -179,7 +171,7 @@ class Home extends Component {
                     </div>
                     
                     <div className="mt-5"/>
-                    <VisibleDiv className="mt-5" id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}/>
+                    <VisibleDiv  className="mt-5" id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}/>
                         {about1}
                         {about2}
                         {about3}
