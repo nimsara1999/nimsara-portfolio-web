@@ -1,4 +1,4 @@
-import React, { Component, useState} from 'react';
+import React, { Component } from 'react';
 import './Home.css';  // Import the CSS file
 import AboutCard from '../components/AboutCard';
 import ProjectCard from '../components/ProjectCard';
@@ -11,6 +11,7 @@ import { TbBrandFiverr } from "react-icons/tb";
 import { FaSquareUpwork } from "react-icons/fa6";
 import { BsEnvelope,BsPhone } from "react-icons/bs"; // Import the email icon
 import { useInView } from 'react-intersection-observer';
+
 
 const about1 = (
     <p className="text-light-grey mt-5" style={{textAlign:'justify'}}>
@@ -33,16 +34,16 @@ const about3 = (
 
 
 // Create a new component to track visibility
-const VisibleDiv = ({ id, children }) => {
+const VisibleDiv = ({ id, children, handleVisibilityChange }) => {
     const { ref, inView } = useInView({
         threshold: 0.5, 
     });
 
     React.useEffect(() => {
         if (inView) {
-            console.log(`Div with ID ${id} is visible.`);
+            handleVisibilityChange(id);
         }
-    }, [inView, id]);
+    }, [inView, id, handleVisibilityChange]);
 
     return (
         <div ref={ref} id={id}>
@@ -52,7 +53,15 @@ const VisibleDiv = ({ id, children }) => {
 };
 
 
+
 class Home extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentID: 'list-item-1'
+        };
+    }
     
     componentDidMount() {
         const spotlight = document.querySelector('.spotlight');
@@ -77,7 +86,19 @@ class Home extends Component {
         }
     }
 
+    handleVisibilityChange = (id) => {
+        this.setState({ currentID: id });
+    }
+
+    scrollTo = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
     render() {
+        const { currentID } = this.state;
         return (
             <div className="bg-primary text-white container-fluid" style={{ height: "100vh", display: 'flex', flexDirection: 'row' }}>
                 <div className="spotlight"/>
@@ -95,10 +116,10 @@ class Home extends Component {
                     <div className="mt-5"/>
 
                     <div id="list-example">
-                    <a className="list-group-item list-group-item-action" href="#list-item-1">About</a>
-                    <a className="list-group-item list-group-item-action" href="#list-item-2" >Background</a>
-                    <a className="list-group-item list-group-item-action" href="#list-item-3">Projects</a>
-                    <a className="list-group-item list-group-item-action" href="#list-item-4">Contact</a>
+                    <a className="list-group-item list-group-item-action mb-2" href="#list-item-1" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}} onClick={() => this.scrollTo('list-item-1')}>- About</a>
+                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-2" style={currentID==='list-item-2'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Background</a>
+                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
+                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-4" style={currentID==='list-item-4'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Contact</a>
                     </div>
 
                     <div className="d-flex mt-6 col-8" >
@@ -158,22 +179,22 @@ class Home extends Component {
                     </div>
                     
                     <div className="mt-5"/>
-                    <VisibleDiv className="mt-5" id="list-item-1"/>
+                    <VisibleDiv className="mt-5" id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}/>
                         {about1}
                         {about2}
                         {about3}
-                        <VisibleDiv id="list-item-2"/>
+                        <VisibleDiv id="list-item-2" handleVisibilityChange={this.handleVisibilityChange}/>
                             <h4 className='mt-5'>Background</h4>
                             {aboutData.map((about, index) => (
                                 <AboutCard key={index} {...about} />
                             ))}
-                        <VisibleDiv className="mt-5" id="list-item-3"/>
+                        <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}/>
                         <h4 className='mt-5'>Projects</h4>
                         {projectData.map((project, index) => (
                             <ProjectCard key={index} {...project} />
                         ))}
 
-                        <VisibleDiv className="mt-5" id="list-item-4"/>
+                        <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}/>
                         <h4 className='mt-5 mb-3'>Contact Me</h4>
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
