@@ -12,7 +12,7 @@ const aboutData = [
         scale: 1.65,
     },
     {
-        description: 'Successfully completed internship as a full-stack developer at Circles Life.',
+        description: 'Successfully completed intern as a full-stack developer at Circles Life.',
         image: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Circles_Life_RGB_Color_Logo.svg',
         scale: 1,
     },
@@ -26,13 +26,13 @@ const aboutData = [
         description: '3yr+ experience with IOT technologies.',
         image: 'https://static.vecteezy.com/system/resources/previews/026/428/284/original/smart-home-3d-icon-smart-home-system-concept-internet-of-things-iot-smart-home-and-network-connect-concept-png.png',
         scale: 1.7,
-        badges: ["microcontroller", "C++", "mqtt", "sensor", "actuator", "nodered", 'BLE', "wifi"],
+        badges: ["microcontroller", "C++", "mqtt", "sensor", "actuator", "nodered", 'BLE', "wifi","protocols"],
     },
     {
         description: '2yr+ experience with Fullstack technologies.',
         image: 'https://drive.google.com/thumbnail?id=1yOw8d4Lxns4hDyz6eqQWS3JfjzmhK_Qp',
         scale: 1.6,
-        badges: ["react", "html", "css", "native", "javascript", "python", "java", "springboot", "mysql", "firebase"],
+        badges: ["react", "html", "css", "native", "javascript", "python", "java","mysql", "springboot", "firebase",'mongoDB'],
     },
     {
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',

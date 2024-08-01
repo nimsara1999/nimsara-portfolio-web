@@ -4,6 +4,15 @@ body, html, #root {
     overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
+.text-light-grey {
+    color: #959caf; /* You can adjust the grey shade as needed */
+}
+
+.tech-highlight {
+    color: #FFFFFF; /* White color for technical words */
+}
+
+
 .spotlight {
     position: fixed;
     top: 0;
@@ -20,4 +29,50 @@ body, html, #root {
 .img-fluid.double-size {
     width: 50%;  /* Adjust according to your preference */
     height: auto; /* Maintain aspect ratio */
+}
+
+.mt-6 {
+    margin-top: 16rem; 
+}
+
+.icon-link {
+    color: white; /* Initial color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+.icon-link.linkedin {
+    color: #959caf; /* LinkedIn color */
+}
+.icon-link.linkedin:hover {
+    color: #ffffff; /* LinkedIn color */
+}
+.icon-link.fiverr {
+    color: #959caf; /* Fiverr color */
+}
+.icon-link.fiverr:hover {
+    color: #ffffff; /* Fiverr color */
+}
+.icon-link.upwork {
+    color: #959caf; /* Upwork color */
+}
+.icon-link.upwork:hover {
+    color: #ffffff; /* Upwork color */
+}
+.icon-link.github {
+    color: #959caf; /* GitHub color */
+}
+.icon-link.github:hover {
+    color: #ffffff; /* GitHub color */
+}
+.icon-link.phone {
+    color: #959caf; /* Upwork color */
+}
+.icon-link.phone:hover {
+    color: #ffffff; /* Upwork color */
+}
+.icon-link.email {
+    color: #959caf; /* GitHub color */
+}
+
+.icon-link.email:hover {
+    color: #ffffff; /* GitHub color */
 }

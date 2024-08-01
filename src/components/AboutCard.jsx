@@ -26,7 +26,7 @@ const AboutCard = ({description, image, scale, badges }) => {
     const handleBadges = () => {
         if (badges === undefined) return;
         return badges.map((badge, index) => (
-            <span key={index} className="badge rounded-pill custom-badge">
+            <span key={index} className="badge rounded-pill custom-badge" style={{color:'#00ccff',fontWeight:'lighter'}}>
                 {badge}
             </span>
         ));
@@ -34,8 +34,10 @@ const AboutCard = ({description, image, scale, badges }) => {
     
 
     return (
+        <>
+
         <div
-            className="card m-1"
+            className="card m-1 d-none d-md-block"
             style={{
                 width: '20rem',
                 transition: 'all 0.5s', // Smooth transition for all properties
@@ -61,6 +63,35 @@ const AboutCard = ({description, image, scale, badges }) => {
                 </div>
             </div>
         </div>
+
+        <div
+            className="card m-1 d-md-none"
+            style={{
+                width: '100%', // Adjust the width as needed
+                transition: 'all 0.5s', // Smooth transition for all properties
+                ...style // Spread the style object here
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
+            <div className="row no-gutters align-items-center"> {/* Use 'align-items-center' to align items vertically */}
+                <div className="col-4"> {/* Allocate column size for the image */}
+                    <img
+                        src={image}
+                        className="card-img-top"
+                        alt="Card"
+                        style={{ transform: `scale(${scale * 0.6})`, width: '100%' }} // Ensure the image covers the column width
+                    />
+                </div>
+                <div className="col-8"> {/* Allocate column size for the description */}
+                    <div className="card-body">
+                        <p className="card-text custom-text-secondary" style={{ margin: 0 }}>{description}</p>
+                        {handleBadges()}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </>
     );
 };
 
