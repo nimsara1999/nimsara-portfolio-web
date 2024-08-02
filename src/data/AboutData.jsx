@@ -56,7 +56,7 @@ const aboutData = [
         description: 'Listning Musics, Badminton, Participated Iot Seminar Series from ACM, IEEE Membership, Committee Member in More Ventures...',
         image: 'https://drive.google.com/thumbnail?id=1sv7GMNLrd8SHqKURB8ErAsTOg5mSGID4',
         scale: 1.4,
-        badges: ["conversional in english"],
+        badges: ["Conversational in english"],
     },
     
 ];
