@@ -23,6 +23,18 @@ const aboutData = [
         badges: ['iot', 'fullstack', 'mobile-app'],
     },
     {
+        description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
+        image: 'https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png',
+        scale: 1,
+        badges: ["$500+ earnings", "9+ projects"],
+    },
+    {
+        description: 'Freelancer - Five Star rated IOT based Fullstack developer at Upwork.',
+        image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
+        scale: 1,
+        badges: ["$1.4K+ earnings", "2+ projects"],
+    },
+    {
         description: '3yr+ experience with IOT technologies.',
         image: 'https://static.vecteezy.com/system/resources/previews/026/428/284/original/smart-home-3d-icon-smart-home-system-concept-internet-of-things-iot-smart-home-and-network-connect-concept-png.png',
         scale: 1.7,
@@ -35,16 +47,16 @@ const aboutData = [
         badges: ["react", "html", "css", "native", "javascript", "python", "java","mysql", "springboot", "firebase"],
     },
     {
-        description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
-        image: 'https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png',
-        scale: 1,
-        badges: ["$500+ earnings", "9+ projects"],
+        description: 'Project Management & Software Engineering Background.',
+        image: 'https://drive.google.com/thumbnail?id=1jih-WrolTm3RQTZYcQVw_oPo0wz5N8hE',
+        scale: 1.6,
+        badges: ["git", "jira", "google-vm", "oop","google cloud", "docker","kubernetes","algorithms"],
     },
     {
-        description: 'Freelancer - Five Star rated IOT based Fullstack developer at Upwork.',
-        image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
-        scale: 1,
-        badges: ["$1.4K+ earnings", "2+ projects"],
+        description: 'Listning Musics, Badminton, Participated Iot Seminar Series from ACM, IEEE Membership, Committee Member in More Ventures...',
+        image: 'https://drive.google.com/thumbnail?id=1sv7GMNLrd8SHqKURB8ErAsTOg5mSGID4',
+        scale: 1.4,
+        badges: ["conversional in english"],
     },
     
 ];

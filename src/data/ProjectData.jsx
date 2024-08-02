@@ -25,6 +25,14 @@ const projectData = [
         badges: ['react-native', 'javascript', 'firestore', 'firebase-authentication' ,'google-maps api','google-cloud'],
     },
     {
+        title: 'Full-stack Email Management System. (Ongoing)',
+        description:  "The email management system, built with Node.js for the backend, React for the frontend, and MySQL for the database, features dynamic dashboards for admin and normal users. It supports user management, email composition, inbox and sent items, personal settings, and a birthday notification system, ensuring efficient communication and personalized user experiences.",
+        image: "https://drive.google.com/thumbnail?id=1NixLg-S_jDk0x-NxyZyuLoDapMAuVLik",
+        scale: 1,
+        badges: ['javascript', 'react', 'bootstrap', 'html', 'css', 'nodejs', 'mysql', 'rest-api', 'jwt-authentication'],
+        link:'https://github.com/nimsara1999/EmailManagerJs'
+    },
+    {
         title: 'Portfolio Website',
         description:  "My portfolio website showcases my expertise in web development, crafted using React, Bootstrap, HTML, and CSS. Designed with mobile responsiveness in mind, it provides a seamless viewing experience on various devices. The site is structured into distinct sections, each highlighting different aspects of my professional skills and projects, ensuring that visitors can easily navigate and explore my work.",
         image: "https://drive.google.com/thumbnail?id=1mR8-VRpUiLNDFXGXVLhrfVX07jVbXM8A",

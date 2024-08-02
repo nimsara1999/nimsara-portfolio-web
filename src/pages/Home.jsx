@@ -17,7 +17,7 @@ import { ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootstrap
 
 const about1 = (
     <p className="text-light-grey mt-8" style={{textAlign:'justify',marginRight:5}}>
-        I'm a <span className="tech-highlight">full-stack and embedded systems engineer</span> with three years of experience. My skills span JavaScript, React, Node.js, Java, Spring Boot, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
+        I'm a <span className="tech-highlight">full-stack and embedded systems engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools , and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
     </p>
 );
 
@@ -155,10 +155,10 @@ class Home extends Component {
                 <div className="container-fluid col-sm-5 offset-md-5 right-column">
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>About</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-2" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}} >Background</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>Projects</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>Contact</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white'}:{color:'#959caf'}}>About</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-2" style={currentID==='list-item-2'?{color:'white'}:{color:'#959caf'}} >Background</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={currentID==='list-item-3'?{color:'white'}:{color:'#959caf'}}>Projects</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={currentID==='list-item-4'?{color:'white'}:{color:'#959caf'}}>Contact</a>
                 </div>
 
                 <div id="scrollSpy" data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-smooth-scroll="true" tabIndex="0" style={{ height: '100%', overflowY: 'scroll' }}>
@@ -207,12 +207,11 @@ class Home extends Component {
                                 ))}
                             </div>
 
-                        <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}>
+                        <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}/>
                         <h4 className='mt-7 mb-3'>Projects</h4>
                         {projectData.map((project, index) => (
                             <ProjectCard key={index} {...project} />
                         ))}
-                        </VisibleDiv>
 
                         <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
                         <h4 className='mt-7 mb-3'>Contact Me</h4>
