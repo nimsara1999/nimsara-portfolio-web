@@ -155,10 +155,10 @@ class Home extends Component {
                 <div className="container-fluid col-sm-5 offset-md-5 right-column">
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={{color:'grey'}}>About</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-2" style={{color:'grey'}} >Background</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={{color:'grey'}}>Projects</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={{color:'grey'}}>Contact</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>About</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-2" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}} >Background</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>Projects</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>Contact</a>
                 </div>
 
                 <div id="scrollSpy" data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-smooth-scroll="true" tabIndex="0" style={{ height: '100%', overflowY: 'scroll' }}>
