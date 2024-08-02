@@ -112,7 +112,7 @@ class Home extends Component {
             <div className="bg-primary text-white container-fluid" style={{ height: "100vh", display: 'flex', flexDirection: 'row' }}>
                 <div className="spotlight"/>
 
-                <div className="container offset-sm-2 col-sm-3 mt-5 d-none d-md-block" style={{ height: "100vh", position: 'fixed', overflowY: 'scroll' }}>
+                <div className="container offset-md-2 col-sm-3 mt-5 d-none d-md-block" style={{ height: "100vh", position: 'fixed', overflowY: 'scroll' }}>
                     <h1 className='mt-5'>Nimsara Paramulla</h1>
                     <h5>Full-stack Engineer</h5>
                     <h5>Embedded Systems Engineer</h5>
@@ -150,18 +150,27 @@ class Home extends Component {
                     </div>
 
                 </div>
+
                 
-                <div className="container-fluid col-sm-5 offset-sm-5 right-column">
+                <div className="container-fluid col-sm-5 offset-md-5 right-column">
+                {/* Navigation bar */}
+                <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={{color:'grey'}}>About</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-2" style={{color:'grey'}} >Background</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={{color:'grey'}}>Projects</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={{color:'grey'}}>Contact</a>
+                </div>
+
                 <div id="scrollSpy" data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-smooth-scroll="true" tabIndex="0" style={{ height: '100%', overflowY: 'scroll' }}>
                     
-                    <div className='d-md-none text-center'>
+                    <div id="list-item-0" className='d-md-none text-center'>
                     <h1 className='mt-5'>Nimsara Paramulla</h1>
                     <h6 >Full-stack Engineer</h6>
                     <h6>Embedded Systems Engineer</h6>
                     <img src="https://drive.google.com/thumbnail?id=1xZeEK-zVG4JbZasJodlxg3Xcs26UtFuo" className="img-fluid double-size mt-3"
                         style={{ borderRadius: '50%',  boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgba(247, 247, 247, 0.1)' }}
                     />
-                    <div className="d-flex mt-5 col-8 text-center">
+                    <div className="d-flex mt-5 col-8 offset-2 text-center">
                         <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
                             <BsGithub style={{fontSize:20}} />
                         </a>
@@ -181,16 +190,15 @@ class Home extends Component {
                             <FaSquareUpwork style={{fontSize:20}} />
                         </a>
                     </div>
-
                     </div>
                     
-                    <VisibleDiv   id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}>
+                    <VisibleDiv className="mb-5"  id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}>
                         {about1}
                         {about2}
                         {about3}
                         </VisibleDiv>
                         <VisibleDiv className="mt-5" id="list-item-2" handleVisibilityChange={this.handleVisibilityChange}/>
-                            <h4 className='mt-7 mb-3'>Background</h4>
+                            <h4 className='mt-5 mb-3'>Background</h4>
                             <div className="about-cards-container">
                                 {aboutData.map((about, index) => (
                                     <div className="about-card">
@@ -211,7 +219,7 @@ class Home extends Component {
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
                         <p>Address: (70294) Madampe, Atakalanpanna, Sri-Lanka.</p>
-                        <div className="d-flex col-5 text-center mb-5">
+                        <div className="d-flex col-5 text-center mb-6">
                         <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
                             <BsGithub style={{fontSize:20}} />
                         </a>

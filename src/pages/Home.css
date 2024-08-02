@@ -49,6 +49,18 @@ body, html, #root {
     margin-top: 6rem; 
 }
 
+.mb-6 {
+    margin-bottom: 16rem; 
+}
+
+.mb-7 {
+    margin-bottom: 7rem; 
+}
+
+.mb-8 {
+    margin-bottom: 6rem; 
+}
+
 .icon-link {
     color: white; /* Initial color */
     transition: color 0.3s ease; /* Smooth transition */
@@ -90,3 +102,4 @@ body, html, #root {
 .icon-link.email:hover {
     color: #ffffff; /* GitHub color */
 }
+
