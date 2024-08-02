@@ -11,22 +11,24 @@ import { TbBrandFiverr } from "react-icons/tb";
 import { FaSquareUpwork } from "react-icons/fa6";
 import { BsEnvelope,BsPhone } from "react-icons/bs"; // Import the email icon
 import { useInView } from 'react-intersection-observer';
+import { ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootstrap
+
 
 
 const about1 = (
-    <p className="text-light-grey mt-5" style={{textAlign:'justify'}}>
+    <p className="text-light-grey mt-8" style={{textAlign:'justify',marginRight:5}}>
         I'm a <span className="tech-highlight">full-stack and embedded systems engineer</span> with three years of experience. My skills span JavaScript, React, Node.js, Java, Spring Boot, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
     </p>
 );
 
 const about2 = (
-    <p className="text-light-grey" style={{textAlign:'justify'}}>
+    <p className="text-light-grey" style={{textAlign:'justify',marginRight:5}}>
         I hold a <span className="tech-highlight">BSc Engineering Honours Degree in Computer Science and Engineering from the University of Moratuwa, Sri-Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and a <span className="tech-highlight">5 star rating on Fiverr and Upwork platforms</span>, underscoring my expertise across various technical domains.
     </p>
 );
 
 const about3 = (
-    <p className="text-light-grey" style={{textAlign:'justify'}}>
+    <p className="text-light-grey" style={{textAlign:'justify',marginRight:5}}>
         My portfolio includes extensive work with fullstack technologies and embedded-systems based projects, also system debugging, ensuring optimal functionality and performance.
     </p>
 );
@@ -36,7 +38,7 @@ const about3 = (
 // Create a new component to track visibility
 const VisibleDiv = ({ id, children, handleVisibilityChange }) => {
     const { ref, inView } = useInView({
-        threshold: 0.25, 
+        threshold: 0.5, 
     });
 
     React.useEffect(() => {
@@ -72,6 +74,12 @@ class Home extends Component {
 
         // Scroll right side column from anywhere on the page
         document.addEventListener('wheel', this.handleScroll, { passive: false });
+
+        const scrollSpyElement = document.querySelector("#scrollSpy");
+        const scrollSpyInstance = new ScrollSpy(scrollSpyElement, {
+          target: '#my-nav'
+        });
+        console.log(scrollSpyInstance);
     }
 
     componentWillUnmount() {
@@ -81,10 +89,19 @@ class Home extends Component {
     handleScroll = (event) => {
         const rightColumn = document.querySelector('.right-column');
         if (rightColumn) {
-            rightColumn.scrollTop += event.deltaY;
-            event.preventDefault();
+            // Check if the wheel event should scroll the right column or propagate naturally
+            if ((event.deltaY < 0 && rightColumn.scrollTop === 0) || // Scrolling up at the top
+                (event.deltaY > 0 && rightColumn.scrollTop === rightColumn.scrollHeight - rightColumn.offsetHeight)) { // Scrolling down at the bottom
+                // Allow default browser scroll if at the limits of the content
+                event.stopPropagation(); // Stop the event from propagating to other elements
+            } else {
+                // Otherwise, perform custom scroll and prevent the default scroll
+                rightColumn.scrollTop += event.deltaY;
+                event.preventDefault(); // Prevent the browser's default scroll
+            }
         }
     }
+    
 
     handleVisibilityChange = (id) => {
         this.setState({ currentID: id });
@@ -102,9 +119,6 @@ class Home extends Component {
                     <img src="https://drive.google.com/thumbnail?id=1xZeEK-zVG4JbZasJodlxg3Xcs26UtFuo" className="img-fluid double-size mt-3"
                         style={{ borderRadius: '50%',  boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgba(247, 247, 247, 0.1)' }}
                     />
-                    {/* <div className="embed-responsive embed-responsive-4by3 mt-5">
-                        <iframe className="embed-responsive-item m-0" src="https://www.youtube.com/embed/Oq97EmuJA98?rel=0" allowFullScreen></iframe>
-                    </div> */}
                     <div className="mt-5"/>
 
                     <div id="list-example">
@@ -137,9 +151,9 @@ class Home extends Component {
 
                 </div>
                 
-                <div className="container-fluid col-sm-5 offset-sm-5 right-column" style={{ height: "100vh", overflowY: 'auto' }}>
-                    <div className="scrollspy-example row" data-bs-spy="scroll" data-bs-target="#list-example"  tabIndex="0">
-
+                <div className="container-fluid col-sm-5 offset-sm-5 right-column">
+                <div id="scrollSpy" data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-smooth-scroll="true" tabIndex="0" style={{ height: '100%', overflowY: 'scroll' }}>
+                    
                     <div className='d-md-none text-center'>
                     <h1 className='mt-5'>Nimsara Paramulla</h1>
                     <h6 >Full-stack Engineer</h6>
@@ -170,24 +184,30 @@ class Home extends Component {
 
                     </div>
                     
-                    <div className="mt-5"/>
-                    <VisibleDiv  className="mt-5" id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}/>
+                    <VisibleDiv   id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}>
                         {about1}
                         {about2}
                         {about3}
-                        <VisibleDiv id="list-item-2" handleVisibilityChange={this.handleVisibilityChange}/>
-                            <h4 className='mt-5'>Background</h4>
-                            {aboutData.map((about, index) => (
-                                <AboutCard key={index} {...about} />
-                            ))}
-                        <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}/>
-                        <h4 className='mt-5'>Projects</h4>
+                        </VisibleDiv>
+                        <VisibleDiv className="mt-5" id="list-item-2" handleVisibilityChange={this.handleVisibilityChange}/>
+                            <h4 className='mt-7 mb-3'>Background</h4>
+                            <div className="about-cards-container">
+                                {aboutData.map((about, index) => (
+                                    <div className="about-card">
+                                        <AboutCard key={index} {...about} />
+                                    </div>
+                                ))}
+                            </div>
+
+                        <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}>
+                        <h4 className='mt-7 mb-3'>Projects</h4>
                         {projectData.map((project, index) => (
                             <ProjectCard key={index} {...project} />
                         ))}
+                        </VisibleDiv>
 
-                        <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}/>
-                        <h4 className='mt-5 mb-3'>Contact Me</h4>
+                        <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
+                        <h4 className='mt-7 mb-3'>Contact Me</h4>
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
                         <p>Address: (70294) Madampe, Atakalanpanna, Sri-Lanka.</p>
@@ -211,6 +231,7 @@ class Home extends Component {
                             <FaSquareUpwork style={{fontSize:20}} />
                         </a>
                     </div>
+                    </VisibleDiv>
                     </div>
                 </div>
             </div>

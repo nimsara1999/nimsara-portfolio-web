@@ -13,6 +13,13 @@ body, html, #root {
 }
 
 
+.about-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
 .spotlight {
     position: fixed;
     top: 0;
@@ -33,6 +40,13 @@ body, html, #root {
 
 .mt-6 {
     margin-top: 16rem; 
+}
+
+.mt-7 {
+    margin-top: 7rem; 
+}
+.mt-8 {
+    margin-top: 6rem; 
 }
 
 .icon-link {

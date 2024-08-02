@@ -32,17 +32,19 @@ const aboutData = [
         description: '2yr+ experience with Fullstack technologies.',
         image: 'https://drive.google.com/thumbnail?id=1yOw8d4Lxns4hDyz6eqQWS3JfjzmhK_Qp',
         scale: 1.6,
-        badges: ["react", "html", "css", "native", "javascript", "python", "java","mysql", "springboot", "firebase",'mongoDB'],
+        badges: ["react", "html", "css", "native", "javascript", "python", "java","mysql", "springboot", "firebase"],
     },
     {
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
         image: 'https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png',
         scale: 1,
+        badges: ["$500+ earnings", "9+ projects"],
     },
     {
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Upwork.',
         image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
         scale: 1,
+        badges: ["$1.4K+ earnings", "2+ projects"],
     },
     
 ];
