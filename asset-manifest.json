@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nimsara-portfolio-web/static/css/main.3a2f2725.css",
+    "main.js": "/nimsara-portfolio-web/static/js/main.8d444589.js",
+    "index.html": "/nimsara-portfolio-web/index.html",
+    "main.3a2f2725.css.map": "/nimsara-portfolio-web/static/css/main.3a2f2725.css.map",
+    "main.8d444589.js.map": "/nimsara-portfolio-web/static/js/main.8d444589.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a2f2725.css",
+    "static/js/main.8d444589.js"
+  ]
+}
