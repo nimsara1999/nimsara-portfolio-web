@@ -39,7 +39,7 @@ const AboutCard = ({description, image, scale, badges }) => {
         <div
             className="card m-1 d-none d-md-block"
             style={{
-                width: '20rem',
+                width: '16.5rem',
                 transition: 'all 0.5s', // Smooth transition for all properties
                 ...style // Spread the style object here
             }}
@@ -47,7 +47,7 @@ const AboutCard = ({description, image, scale, badges }) => {
             onMouseLeave={handleMouseLeave}
         >
             <div className="row no-gutters">
-                <div className="col-md-3" style={{alignItems:'center', alignSelf:'center' }}>
+                <div className="col-md-3" style={{alignItems:'center', alignSelf:'center'}}>
                     <img
                         src={image}
                         className="card-img-top"
@@ -67,7 +67,7 @@ const AboutCard = ({description, image, scale, badges }) => {
         <div
             className="card m-1 d-md-none"
             style={{
-                width: '100%', // Adjust the width as needed
+                width: '96%', // Adjust the width as needed
                 transition: 'all 0.5s', // Smooth transition for all properties
                 ...style // Spread the style object here
             }}

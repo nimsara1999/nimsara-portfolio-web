@@ -20,7 +20,7 @@ const aboutData = [
         description: 'Founder - Softnx Technologies by Nimsara',
         image: 'https://drive.google.com/thumbnail?id=1qF3Q4nrnD4KdxsgV04x5Prw8MsEBb20L',
         scale: 1.7,
-        badges: ['iot', 'fullstack', 'mobile-app'],
+        badges: ["full-stack", "mobile","iot"],
     },
     {
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
@@ -50,10 +50,10 @@ const aboutData = [
         description: 'Project Management & Software Engineering Background.',
         image: 'https://drive.google.com/thumbnail?id=1jih-WrolTm3RQTZYcQVw_oPo0wz5N8hE',
         scale: 1.6,
-        badges: ["git", "jira", "google-vm", "oop","google cloud", "docker","kubernetes","algorithms"],
+        badges: ["git", "jira", "google-vm", "oop","google cloud", "docker","kubernetes","algorithms","database"],
     },
     {
-        description: 'Listning Musics, Badminton, Participated Iot Seminar Series from ACM, IEEE Membership, Committee Member in More Ventures...',
+        description: 'Listning Musics, Participated Iot Seminar Series from ACM, IEEE Membership, Committee Member in More Ventures...',
         image: 'https://drive.google.com/thumbnail?id=1sv7GMNLrd8SHqKURB8ErAsTOg5mSGID4',
         scale: 1.4,
         badges: ["Conversational in english"],

@@ -109,11 +109,11 @@ class Home extends Component {
     render() {
         const { currentID } = this.state;
         return (
-            <div className="bg-primary text-white container-fluid" style={{ height: "100vh", display: 'flex', flexDirection: 'row' }}>
+            <div className="bg-primary text-white" style={{ height: "100vh", display: 'flex', flexDirection: 'row' }}>
                 <div className="spotlight"/>
 
-                <div className="container offset-md-2 col-sm-3 mt-5 d-none d-md-block" style={{ height: "100vh", position: 'fixed', overflowY: 'scroll' }}>
-                    <h1 className='mt-5'>Nimsara Paramulla</h1>
+                <div className="container offset-md-2 col-sm-3 mt-5 d-none d-md-block" style={{ height: "100vh", position: 'fixed'}}>
+                    <h1 className='mt-5'>Nimsara Thisal</h1>
                     <h5>Full-stack Engineer</h5>
                     <h5>Embedded Systems Engineer</h5>
                     <img src="https://drive.google.com/thumbnail?id=1xZeEK-zVG4JbZasJodlxg3Xcs26UtFuo" className="img-fluid double-size mt-3"
@@ -127,32 +127,44 @@ class Home extends Component {
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-4" style={currentID==='list-item-4'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Contact</a>
                     </div>
-
-                    <div className="d-flex mt-6 col-8" >
-                        <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
+                    <div className="d-flex mt-9 col-8" >
+                        <a className="list-group-item list-group-item-action icon-link github" 
+                        href="https://github.com/nimsara1999?tab=repositories" 
+                        title="GitHub">
                             <BsGithub style={{fontSize:30}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link linkedin" href="https://www.linkedin.com/in/nimsara-thisal-166513239/">
+                        <a className="list-group-item list-group-item-action icon-link linkedin" 
+                        href="https://www.linkedin.com/in/nimsara-thisal-166513239/" 
+                        title="LinkedIn">
                             <FaLinkedin style={{fontSize:30}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link email" href="mailto:nimsarathisalgcc@gmail.com">
+                        <a className="list-group-item list-group-item-action icon-link email" 
+                        href="mailto:nimsarathisalgcc@gmail.com" 
+                        title="Email">
                             <BsEnvelope style={{fontSize:30}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link phone" href="tel:+94710880133">
+                        <a className="list-group-item list-group-item-action icon-link phone" 
+                        href="tel:+94710880133" 
+                        title="Call">
                             <BsPhone style={{fontSize:28}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link fiverr" href="https://www.fiverr.com/s/bd5wKjX">
+                        <a className="list-group-item list-group-item-action icon-link fiverr" 
+                        href="https://www.fiverr.com/s/bd5wKjX" 
+                        title="Fiverr">
                             <TbBrandFiverr style={{fontSize:30}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link upwork" href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share">
+                        <a className="list-group-item list-group-item-action icon-link upwork" 
+                        href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share" 
+                        title="Upwork">
                             <FaSquareUpwork style={{fontSize:30}} />
                         </a>
                     </div>
 
+
                 </div>
 
                 
-                <div className="container-fluid col-sm-5 offset-md-5 right-column">
+                <div className=" col-sm-7 offset-md-5 right-column px-2">
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
                     <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white'}:{color:'#959caf'}}>About</a>
@@ -191,7 +203,8 @@ class Home extends Component {
                         </a>
                     </div>
                     </div>
-                    
+
+                    <div className='col-sm-8'>
                     <VisibleDiv className="mb-5"  id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}>
                         {about1}
                         {about2}
@@ -217,7 +230,7 @@ class Home extends Component {
                         <h4 className='mt-7 mb-3'>Contact Me</h4>
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
-                        <p>Address: (70294) Madampe, Atakalanpanna, Sri-Lanka.</p>
+                        <p>Address: Madampe, Atakalanpanna, Sri-Lanka. (70294)</p>
                         <div className="d-flex col-5 text-center mb-6">
                         <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
                             <BsGithub style={{fontSize:20}} />
@@ -239,6 +252,7 @@ class Home extends Component {
                         </a>
                     </div>
                     </VisibleDiv>
+                    </div>
                     </div>
                 </div>
             </div>

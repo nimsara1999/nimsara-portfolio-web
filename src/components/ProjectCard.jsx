@@ -47,7 +47,7 @@ const ProjectCard = ({ title, description, image, scale, badges, link }) => {
             <div
                 className="card m-1 d-none d-md-block"
                 style={{
-                    width: '40.5rem',
+                    width: '96%',
                     transition: 'all 0.5s', // Smooth transition for all properties
                     ...style // Spread the style object here
                 }}
@@ -80,7 +80,7 @@ const ProjectCard = ({ title, description, image, scale, badges, link }) => {
             <div
                 className="card m-1 d-md-none"
                 style={{
-                    width: '100%',
+                    width: '96%',
                     transition: 'all 0.5s', // Smooth transition for all properties
                     ...style // Spread the style object here
                 }}
