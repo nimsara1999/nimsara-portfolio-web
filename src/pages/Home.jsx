@@ -164,7 +164,7 @@ class Home extends Component {
                 </div>
 
                 
-                <div className=" col-sm-7 offset-md-5 right-column px-3">
+                <div className=" col-sm-7 offset-md-5 right-column px-2">
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
                     <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white'}:{color:'#959caf'}}>About</a>
