@@ -17,7 +17,7 @@ import { ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootstrap
 
 const about1 = (
     <p className="text-light-grey mt-8" style={{textAlign:'justify',marginRight:5}}>
-        I'm a <span className="tech-highlight">full-stack and embedded systems engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools , and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
+        I'm a <span className="tech-highlight">full-stack and embedded systems engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
     </p>
 );
 
@@ -140,12 +140,12 @@ class Home extends Component {
                         </a>
                         <a className="list-group-item list-group-item-action icon-link email" 
                         href="mailto:nimsarathisalgcc@gmail.com" 
-                        title="Email">
+                        title="Email: nimsarathisalgcc@gmail.com">
                             <BsEnvelope style={{fontSize:30}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link phone" 
                         href="tel:+94710880133" 
-                        title="Call">
+                        title="Call: +94710880133">
                             <BsPhone style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link fiverr" 
@@ -164,7 +164,7 @@ class Home extends Component {
                 </div>
 
                 
-                <div className=" col-sm-7 offset-md-5 right-column px-2">
+                <div className=" col-sm-7 offset-md-5 right-column px-3">
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
                     <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white'}:{color:'#959caf'}}>About</a>

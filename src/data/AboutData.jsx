@@ -2,7 +2,7 @@
 
 const aboutData = [
     {
-        description: 'BSc.Engineering UG CSE, University of Moratuwa, Sri-Lanka',
+        description: 'BSc.Engineering CSE, University of Moratuwa, Sri Lanka',
         image: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png',
         scale: 1.2,
     },
@@ -26,13 +26,13 @@ const aboutData = [
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
         image: 'https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png',
         scale: 1,
-        badges: ["$500+ earnings", "9+ projects"],
+        badges: ["$500+ earn", "9+ projects"],
     },
     {
-        description: 'Freelancer - Five Star rated IOT based Fullstack developer at Upwork.',
+        description: 'Freelancer - Five Star rated Embedded Systems and Fullstack developer at Upwork.',
         image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
         scale: 1,
-        badges: ["$1.4K+ earnings", "2+ projects"],
+        badges: ["$1.4K+ earn", "2+ projects"],
     },
     {
         description: '3yr+ experience with IOT technologies.',
@@ -44,7 +44,7 @@ const aboutData = [
         description: '2yr+ experience with Fullstack technologies.',
         image: 'https://drive.google.com/thumbnail?id=1yOw8d4Lxns4hDyz6eqQWS3JfjzmhK_Qp',
         scale: 1.6,
-        badges: ["react", "html", "css", "native", "javascript", "python", "java","mysql", "springboot", "firebase"],
+        badges: ["react", "html", "css", "native", "javascript",'jwt', "python", "java","mysql", "springboot", "firebase"],
     },
     {
         description: 'Project Management & Software Engineering Background.',
@@ -53,7 +53,7 @@ const aboutData = [
         badges: ["git", "jira", "google-vm", "oop","google cloud", "docker","kubernetes","algorithms","database"],
     },
     {
-        description: 'Listning Musics, Participated Iot Seminar Series from ACM, IEEE Membership, Committee Member in More Ventures...',
+        description: 'Listning Musics, Participated Iot Seminar Series from ACM, IEEE Membership, Committee Member in Mora Ventures...',
         image: 'https://drive.google.com/thumbnail?id=1sv7GMNLrd8SHqKURB8ErAsTOg5mSGID4',
         scale: 1.4,
         badges: ["Conversational in english"],
