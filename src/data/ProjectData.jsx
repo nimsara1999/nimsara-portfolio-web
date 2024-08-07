@@ -3,10 +3,10 @@
 const projectData = [
     {
         title: "Custom Chatbot",
-        description: "This custom chatbot enhances the interactivity of my portfolio website by providing visitors with real-time, automated responses. Developed using Java and Spring Boot, the chatbot is integrated with advanced technologies like Astra DB for robust data handling, LangChain4j for improved language understanding, and the ChatGPT API for generating conversational responses. The entire application is hosted within a Docker container, ensuring a scalable, efficient, and isolated environment for deployment.",
-        image: "https://private-user-images.githubusercontent.com/85945422/355821818-b019945b-28be-49ce-9a3d-7323e44f58fe.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjMwMzg4NDQsIm5iZiI6MTcyMzAzODU0NCwicGF0aCI6Ii84NTk0NTQyMi8zNTU4MjE4MTgtYjAxOTk0NWItMjhiZS00OWNlLTlhM2QtNzMyM2U0NGY1OGZlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA3VDEzNDkwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlmYWMyNWQ5MzZiM2ExMzI5MDUwNzc0MTIwZDE2ZTM3NWU0NjYwNWYyNWViNDlhZTM3MDUxOGEyZDRjOTYxNzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.p7Ge_El19DGIk7HL9AdejF2eMANxPOXxBNb40o_oO6c",
+        description: "This custom chatbot boosts my portfolio website's interactivity, offering real-time, automated responses to visitors. Built with Java and Spring Boot, it integrates Astra DB for data management, LangChain4j for enhanced language processing, and the ChatGPT API for natural interactions. The application runs in a Docker container, providing a scalable and efficient deployment environment.",
+        image: "https://drive.google.com/thumbnail?id=1xVmd6NMmKmOUFnli3iptBUwY6h2Nyg7d",
         scale: 1.2,
-        badges: ['springboot', 'java', 'langChain4j', 'astraDB', 'chatgptapi','rest-api','docker'],
+        badges: ['springboot', 'java', 'langChain4j', 'astraDB', 'chatgptapi','docker'],
         link: "https://github.com/nimsara1999/nimsara-portfolio-bot"
     },
     {
