@@ -12,7 +12,7 @@ import { FaSquareUpwork } from "react-icons/fa6";
 import { BsEnvelope,BsPhone } from "react-icons/bs"; // Import the email icon
 import { useInView } from 'react-intersection-observer';
 import { ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootstrap
-
+import Chatbot from '../components/ChatBot/Chatbot';
 
 
 const about1 = (
@@ -111,6 +111,7 @@ class Home extends Component {
         return (
             <div className="bg-primary text-white" style={{ height: "100vh", display: 'flex', flexDirection: 'row' }}>
                 <div className="spotlight"/>
+                <Chatbot/>
 
                 <div className="container offset-md-2 col-sm-3 mt-5 d-none d-md-block" style={{ height: "100vh", position: 'fixed'}}>
                     <h1 className='mt-5'>Nimsara Thisal</h1>
@@ -159,7 +160,6 @@ class Home extends Component {
                             <FaSquareUpwork style={{fontSize:30}} />
                         </a>
                     </div>
-
 
                 </div>
 
@@ -253,6 +253,7 @@ class Home extends Component {
                     </div>
                     </VisibleDiv>
                     </div>
+
                     </div>
                 </div>
             </div>
