@@ -2,6 +2,14 @@
 
 const projectData = [
     {
+        title: "Custom Chatbot",
+        description: "This custom chatbot enhances the interactivity of my portfolio website by providing visitors with real-time, automated responses. Developed using Java and Spring Boot, the chatbot is integrated with advanced technologies like Astra DB for robust data handling, LangChain4j for improved language understanding, and the ChatGPT API for generating conversational responses. The entire application is hosted within a Docker container, ensuring a scalable, efficient, and isolated environment for deployment.",
+        image: "https://private-user-images.githubusercontent.com/85945422/355821818-b019945b-28be-49ce-9a3d-7323e44f58fe.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjMwMzg4NDQsIm5iZiI6MTcyMzAzODU0NCwicGF0aCI6Ii84NTk0NTQyMi8zNTU4MjE4MTgtYjAxOTk0NWItMjhiZS00OWNlLTlhM2QtNzMyM2U0NGY1OGZlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA3VDEzNDkwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlmYWMyNWQ5MzZiM2ExMzI5MDUwNzc0MTIwZDE2ZTM3NWU0NjYwNWYyNWViNDlhZTM3MDUxOGEyZDRjOTYxNzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.p7Ge_El19DGIk7HL9AdejF2eMANxPOXxBNb40o_oO6c",
+        scale: 1.2,
+        badges: ['springboot', 'java', 'langChain4j', 'astraDB', 'chatgptapi','rest-api','docker'],
+        link: "https://github.com/nimsara1999/nimsara-portfolio-bot"
+    },
+    {
         title: "Vision Way Preschool Web-site",
         description: "The Preschool website is an interactive platform that showcases the preschool's mission, values, and events. It features pages on curriculum, faculty, and facilities, alongside a registration form for secure enrollments. The site also includes a gallery of events and activities, providing a comprehensive view of the preschool's offerings and engaging prospective parents and the community.",
         image: "https://drive.google.com/thumbnail?id=1yojNzX7PN57y-hFE4j_1tkq3beEsIrT_",
