@@ -5,7 +5,7 @@ const Chatbot = () => {
     const [inputText, setInputText] = useState('');
     const [isChatWindowOpen, setIsChatWindowOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { text: 'Hello! How can I help you?', isBot: true },
+        { text: 'Hello!', isBot: true },
         { text: "I am Nimsara's Bot", isBot: true }
     ]);
 
@@ -44,6 +44,12 @@ const Chatbot = () => {
         setIsChatWindowOpen(false);
     };
 
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+          handleButtonClick();
+      }
+  };
+
     return (
         <>
             {!isChatWindowOpen && (
@@ -55,8 +61,8 @@ const Chatbot = () => {
             )}
 
             {isChatWindowOpen && (
-                <div id="bot-background" className="offset-9 col-3 p-3 position-absolute bottom-0 end-0 mb-2 mx-4 h-50" style={{ backgroundColor: 'rgba(247, 247, 247, 0.2)', zIndex: 1, boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', borderColor: 'rgba(247, 247, 247, 0.1)', filter: 10, borderRadius: 5 }}>
-                    <button type="button" className="btn-close" aria-label="Close" onClick={handleBotClose}></button>
+              <div id="bot-background" className="offset-9 col-3 p-3 position-absolute bottom-0 end-0 mb-2 mx-4" style={{ backgroundColor: 'rgba(230, 240, 255, 0.25)', zIndex: 10000, boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', borderColor: 'rgba(247, 247, 247, 0.05)', borderRadius: 5, backdropFilter: 'blur(2px)' }}>
+              <button type="button" className="btn-close" aria-label="Close" onClick={handleBotClose}></button>
                     <h5>Nimsara's Bot</h5>
                     <div className="chat-messages mb-3" style={{ maxHeight: '330px', overflowY: 'auto' }}>
                         {messages.map((msg, index) => (
@@ -65,7 +71,7 @@ const Chatbot = () => {
                                     display: 'inline-block',
                                     padding: '10px',
                                     borderRadius: '10px',
-                                    backgroundColor: msg.isBot ? '#e0e0e0' : '#007bff',
+                                    backgroundColor: msg.isBot ? 'white' : '#389bd9',
                                     color: msg.isBot ? '#000' : '#fff'
                                 }}>
                                     {msg.text}
@@ -83,6 +89,7 @@ const Chatbot = () => {
                             aria-describedby="button-addon2"
                             value={inputText}
                             onChange={handleInputChange}
+                            onKeyPress={handleKeyPress}
                         />
                         <button
                             className="btn btn-outline-secondary"

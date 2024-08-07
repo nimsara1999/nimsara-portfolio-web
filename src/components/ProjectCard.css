@@ -1,5 +1,5 @@
 .custom-badge {
-    background-color: #014c678c; /* Custom background color */
+    background-color: rgba(1, 76, 103, 0.549); /* Custom background color */
     color: #00ccff; /* Custom text color */
     margin-left: 1px;
     font-weight: lighter;
@@ -12,7 +12,7 @@
 }
 
 .custom-text-secondary-2{
-    color:  #959caf; /* Custom text color */
+    color:  rgb(149, 156, 175); /* Custom text color */
     font-weight: lighter;
     font-size: 13.5px;
 }
