@@ -33,6 +33,7 @@ const Chatbot = () => {
             setInputText('');
         } catch (error) {
             console.error('There was an error making the POST request:', error);
+            setMessages([...newMessages, { text: "Network Error!", isBot: true }]);
         }
     };
 
@@ -53,26 +54,36 @@ const Chatbot = () => {
     return (
         <>
             {!isChatWindowOpen && (
-                <div id="bot-background" className="offset-11 col-2 p-3 position-absolute bottom-0 end-0">
+                <>
+                <div id="bot-background" className="offset-md-11 col-md-2 p-3 position-absolute bottom-0 end-0 d-none d-md-block" style={{transition: 'all 0.5s',zIndex:10000 }}>
                     <button style={{ border: 'none', background: 'none', padding: 0 }} onClick={handleBotButtonClick}>
-                        <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '40%' }} />
+                        <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '40%'}} />
                     </button>
                 </div>
+
+                <div id="bot-background" className=" d-md-none offset-11 col-3 p-0 position-absolute bottom-0 end-0 text-end" style={{zIndex:10000 }}>
+                    <button style={{ border: 'none', background: 'none', padding: 0 }} onClick={handleBotButtonClick}>
+                        <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '60%'}} />
+                    </button>
+                </div>
+                </>
             )}
 
             {isChatWindowOpen && (
-              <div id="bot-background" className="offset-9 col-3 p-3 position-absolute bottom-0 end-0 mb-2 mx-4" style={{ backgroundColor: 'rgba(230, 240, 255, 0.25)', zIndex: 10000, boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', borderColor: 'rgba(247, 247, 247, 0.05)', borderRadius: 5, backdropFilter: 'blur(2px)' }}>
-              <button type="button" className="btn-close" aria-label="Close" onClick={handleBotClose}></button>
+              <div id="bot-background" className="offset-md-9 col-md-3 p-3 position-absolute bottom-0 end-0 mb-2 mx-4" style={{ backgroundColor: 'rgba(230, 240, 255, 0.25)', zIndex: 10000, boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', borderColor: 'rgba(247, 247, 247, 0.05)', borderRadius: 5, backdropFilter: 'blur(2px)'}}>
+                    <div className="d-flex justify-content-between">
                     <h5>Nimsara's Bot</h5>
-                    <div className="chat-messages mb-3" style={{ maxHeight: '330px', overflowY: 'auto' }}>
+                    <button type="button" className="btn-close" aria-label="Close" onClick={handleBotClose}></button>
+                    </div>
+                    <div className="chat-messages mb-3" style={{ maxHeight: '380px', overflowY: 'auto' }}>
                         {messages.map((msg, index) => (
-                            <div key={index} style={{ textAlign: msg.isBot ? 'left' : 'right', padding: '5px 0' }}>
+                            <div key={index} style={{ textAlign: msg.isBot ? 'left' : 'right', padding: '2px 0' }}>
                                 <div style={{
                                     display: 'inline-block',
-                                    padding: '10px',
-                                    borderRadius: '10px',
+                                    padding: '5px',
+                                    borderRadius: '5px',
                                     backgroundColor: msg.isBot ? 'white' : '#389bd9',
-                                    color: msg.isBot ? '#000' : '#fff'
+                                    color: msg.isBot ? '#000' : '#fff',
                                 }}>
                                     {msg.text}
                                 </div>
@@ -92,7 +103,7 @@ const Chatbot = () => {
                             onKeyPress={handleKeyPress}
                         />
                         <button
-                            className="btn btn-outline-secondary"
+                            className="btn btn-outline-primary text-white" 
                             type="button"
                             id="button-addon2"
                             onClick={handleButtonClick}
