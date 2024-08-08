@@ -38,44 +38,61 @@ const Chatbot = () => {
     };
 
     const handleBotButtonClick = () => {
-        setIsChatWindowOpen(!isChatWindowOpen);
+        setIsChatWindowOpen(true);
+        setTimeout(() => {
+            document.getElementById("chat-window").classList.add("open");
+        }, 0);
     };
 
     const handleBotClose = () => {
-        setIsChatWindowOpen(false);
+        document.getElementById("chat-window").classList.remove("open");
+        setTimeout(() => {
+            setIsChatWindowOpen(false);
+        }, 500); // match the transition duration
     };
 
     const handleKeyPress = (event) => {
-      if (event.key === 'Enter') {
-          handleButtonClick();
-      }
-  };
+        if (event.key === 'Enter') {
+            handleButtonClick();
+        }
+    };
 
     return (
         <>
+            <style>
+                {`
+                    #chat-window {
+                        transition: transform 0.5s;
+                        transform: translateY(100%);
+                    }
+                    #chat-window.open {
+                        transform: translateY(0);
+                    }
+                `}
+            </style>
             {!isChatWindowOpen && (
                 <>
-                <div id="bot-background" className="offset-md-11 col-md-2 p-3 position-absolute bottom-0 end-0 d-none d-md-block" style={{transition: 'all 0.5s',zIndex:10000 }}>
-                    <button style={{ border: 'none', background: 'none', padding: 0 }} onClick={handleBotButtonClick}>
-                        <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '40%'}} />
-                    </button>
-                </div>
+                    <div id="bot-background" className="offset-md-11 col-md-2 p-3 position-absolute bottom-0 end-0 d-none d-md-block" style={{ transition: 'all 0.5s', zIndex: 10000 }}>
+                        <button style={{ border: 'none', background: 'none', padding: 0 }} onClick={handleBotButtonClick}>
+                            <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '40%' }} />
+                        </button>
+                    </div>
 
-                <div id="bot-background" className=" d-md-none offset-11 col-3 p-0 position-absolute bottom-0 end-0 text-end" style={{zIndex:10000 }}>
-                    <button style={{ border: 'none', background: 'none', padding: 0 }} onClick={handleBotButtonClick}>
-                        <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '60%'}} />
-                    </button>
-                </div>
+                    <div id="bot-background" className="d-md-none offset-11 col-3 p-0 position-absolute bottom-0 end-0 text-end" style={{ zIndex: 10000 }}>
+                        <button style={{ border: 'none', background: 'none', padding: 0 }} onClick={handleBotButtonClick}>
+                            <img src="https://drive.google.com/thumbnail?id=1tzq7OICPkHjllbNsW4AVNHVL866O-0ew" style={{ width: '60%' }} />
+                        </button>
+                    </div>
                 </>
             )}
 
             {isChatWindowOpen && (
-              <div id="bot-background" className="offset-md-9 col-md-3 p-3 position-absolute bottom-0 end-0 mb-2 mx-4" style={{ backgroundColor: 'rgba(230, 240, 255, 0.25)', zIndex: 10000, boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', borderColor: 'rgba(247, 247, 247, 0.05)', borderRadius: 5, backdropFilter: 'blur(2px)'}}>
+                <div id="chat-window" className="offset-md-9 col-md-3 p-3 position-absolute bottom-0 end-0 mb-2 mx-4" style={{ backgroundColor: 'rgba(230, 240, 255, 0.25)', zIndex: 10000, boxShadow: '0 4px 4px rgba(0, 0, 0, 0.5)', borderColor: 'rgba(247, 247, 247, 0.05)', borderRadius: 5, backdropFilter: 'blur(2px)' }}>
                     <div className="d-flex justify-content-between">
-                    <h5>Nimsara's Bot</h5>
-                    <button type="button" className="btn-close" aria-label="Close" onClick={handleBotClose}></button>
+                        <h5>Nimsara's Bot</h5>
+                        <button type="button" className="btn-close" aria-label="Close" onClick={handleBotClose}></button>
                     </div>
-                    <div className="chat-messages mb-3" style={{ maxHeight: '380px', overflowY: 'auto' }}>
+                    <div className="chat-messages mb-3 px-4" style={{ maxHeight: '380px', overflowY: 'auto' }}>
                         {messages.map((msg, index) => (
                             <div key={index} style={{ textAlign: msg.isBot ? 'left' : 'right', padding: '2px 0' }}>
                                 <div style={{
@@ -103,7 +120,7 @@ const Chatbot = () => {
                             onKeyPress={handleKeyPress}
                         />
                         <button
-                            className="btn btn-outline-primary text-white" 
+                            className="btn btn-outline-primary text-white"
                             type="button"
                             id="button-addon2"
                             onClick={handleButtonClick}
