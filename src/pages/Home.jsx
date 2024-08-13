@@ -13,6 +13,7 @@ import { BsEnvelope,BsPhone } from "react-icons/bs"; // Import the email icon
 import { useInView } from 'react-intersection-observer';
 import { ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootstrap
 import Chatbot from '../components/ChatBot/Chatbot';
+import { Typewriter, Cursor } from 'react-simple-typewriter';
 
 
 const about1 = (
@@ -115,8 +116,19 @@ class Home extends Component {
 
                 <div className="container offset-md-2 col-sm-3 mt-5 d-none d-md-block" style={{ height: "100vh", position: 'fixed'}}>
                     <h1 className='mt-5'>Nimsara Thisal</h1>
-                    <h5>Full-stack Engineer</h5>
-                    <h5>Embedded Systems Engineer</h5>
+                    <div className='mt-3'/>
+                    <h5>
+                        <Typewriter
+                            words={['Full-stack Engineer', 'Embedded Systems Engineer']}
+                            loop={0}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={100}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </h5>
+                    <div className='mt-3'/>
                     <img src="https://drive.google.com/thumbnail?id=1xZeEK-zVG4JbZasJodlxg3Xcs26UtFuo" className="img-fluid double-size mt-3"
                         style={{ borderRadius: '50%',  boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgba(247, 247, 247, 0.1)' }}
                     />
@@ -177,8 +189,19 @@ class Home extends Component {
                     
                     <div id="list-item-0" className='d-md-none text-center'>
                     <h1 className='mt-5'>Nimsara Paramulla</h1>
-                    <h6 >Full-stack Engineer</h6>
-                    <h6>Embedded Systems Engineer</h6>
+                    <div className='mt-3'/>
+                    <h6>
+                        <Typewriter
+                            words={['Full-stack Engineer', 'Embedded Systems Engineer']}
+                            loop={0}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={100}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </h6>
+                    <div className='mt-3'/>
                     <img src="https://drive.google.com/thumbnail?id=1xZeEK-zVG4JbZasJodlxg3Xcs26UtFuo" className="img-fluid double-size mt-3"
                         style={{ borderRadius: '50%',  boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgba(247, 247, 247, 0.1)' }}
                     />
