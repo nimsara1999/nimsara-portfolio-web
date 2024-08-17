@@ -13,6 +13,7 @@
     "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
     "chroma-js": "^2.6.1-0",
+    "moment": "^2.30.1",
     "node-sass": "^7.0.3",
     "react": "^18.3.1",
     "react-contribution-calendar": "^1.5.0",
