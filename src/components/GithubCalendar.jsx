@@ -8,7 +8,8 @@ const GitHubCalendar = () => {
     const [contributionsData, setContributionsData] = useState([]);
 
     useEffect(() => {
-        handleGithubContribCalendar();
+        //handleGithubContribCalendar();
+        getContributions('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', 'nimsara1999')
     }, []);
 
     const handleGithubContribCalendar = async () => {
@@ -21,6 +22,51 @@ const GitHubCalendar = () => {
             console.error('There was an error making the get request:', error);
         }
     };
+
+    async function getContributions(token, username) {
+        const headers = {
+            'Authorization': `bearer ${token}`,
+        }
+        const body = {
+            "query": `query {
+                user(login: "${username}") {
+                  contributionsCollection {
+                    contributionCalendar {
+                      weeks {
+                        contributionDays {
+                          color
+                          contributionCount
+                          date
+                        }
+                      }
+                    }
+                  }
+                }
+              }`
+        }
+        const response = await fetch('https://api.github.com/graphql', { method: 'POST', body: JSON.stringify(body), headers: headers });
+        const data = await response.json();
+    
+        // Extract the contributionDays array
+        const weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"];
+        
+        // Initialize an empty array to hold the formatted data
+        const formatA = [];
+    
+        // Iterate over each week and then over each day's contribution
+        weeks.forEach(week => {
+            week.contributionDays.forEach(day => {
+                const formattedDay = {
+                    [day.date]: { level: day.color }
+                };
+                formatA.push(formattedDay);
+            });
+        });
+        console.log('GitHub Contributions Data:', data);
+        setContributionsData(formatA);
+        
+    }
+    
 
     const convertToFormatB = (formatAData) => {
         return formatAData.slice(0, 300).map(item => ({
