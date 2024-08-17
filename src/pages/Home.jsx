@@ -14,6 +14,7 @@ import { useInView } from 'react-intersection-observer';
 import { ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootstrap
 import Chatbot from '../components/ChatBot/Chatbot';
 import { Typewriter, Cursor } from 'react-simple-typewriter';
+import GitHubCalendar from '../components/GithubCalendar';
 
 
 const about1 = (
@@ -172,7 +173,7 @@ class Home extends Component {
                             <FaSquareUpwork style={{fontSize:30}} />
                         </a>
                     </div>
-
+                    
                 </div>
 
                 
@@ -243,8 +244,15 @@ class Home extends Component {
                                 ))}
                             </div>
 
+
+                            
+
                         <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}/>
                         <h4 className='mt-7 mb-3'>Projects</h4>
+                        <div className="mt-5 mb-5 d-none d-md-block" >
+                            <GitHubCalendar/>
+                            </div>
+
                         {projectData.map((project, index) => (
                             <ProjectCard key={index} {...project} />
                         ))}

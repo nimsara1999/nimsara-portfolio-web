@@ -33,7 +33,7 @@ const Chatbot = () => {
             setInputText('');
         } catch (error) {
             console.error('There was an error making the POST request:', error);
-            setMessages([...newMessages, { text: "Network Error!", isBot: true }]);
+            setMessages([...newMessages, { text: "Sorry, this feature is still not publicly available.", isBot: true }]);
         }
     };
 
