@@ -248,7 +248,7 @@ class Home extends Component {
                             
 
                         <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}/>
-                        <h4 className='mt-7 mb-3'>- Projects -</h4>
+                        <h4 className='mt-7 mb-3'>- Projects & Research -</h4>
                 
                             <GitHubCalendar/>
 
