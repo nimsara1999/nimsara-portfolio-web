@@ -7,7 +7,8 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1xVmd6NMmKmOUFnli3iptBUwY6h2Nyg7d",
         scale: 1.2,
         badges: ['springboot', 'java', 'langChain4j', 'astraDB', 'chatgptapi','docker'],
-        link: "https://github.com/nimsara1999/nimsara-portfolio-bot"
+        link: "https://github.com/nimsara1999/nimsara-portfolio-bot",
+        type:['fullstack_mobile']
     },
     {
         title: "Vision Way Preschool Web-site",
@@ -15,7 +16,8 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1yojNzX7PN57y-hFE4j_1tkq3beEsIrT_",
         scale: 1.2,
         badges: ['javascript', 'react', 'bootstrap', 'html', 'css','responsive-design'],
-        link: "https://youtu.be/U0uUUjpdOJ4"
+        link: "https://youtu.be/U0uUUjpdOJ4",
+        type:['fullstack_mobile']
     },
     {
         title: 'Intellimate Voice Assistant',
@@ -23,7 +25,8 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1ORopuoU-H9JHoewhbw7XaLypkL5LSUl2",
         scale: 1.15,
         badges: ['c++','esp32', 'i2c/i2s protocol', 'wifi', 'nodejs', 'chatgpt api', 'google cloud console', 'speech-to-text', 'text-to-speech','emotion prediction api'],
-        link:"https://youtu.be/EcGdtz8JKoo"
+        link:"https://youtu.be/EcGdtz8JKoo",
+        type:['embedded']
     },
     {
         title: 'Easy Boarding Place Finder Mobile-app',
@@ -31,7 +34,16 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1e6snZYlE8RAYNn9jTyQRIZYKxRFQ1i99",
         scale: 1.5,
         badges: ['ios','android','react-native', 'javascript', 'firestore', 'firebase-authentication' ,'google-maps api','google-cloud',],
-        link:'https://github.com/nimsara1999/easyBoarding'
+        link:'https://github.com/nimsara1999/easyBoarding',
+        type:['fullstack_mobile']
+    },
+    {
+        title: 'Predictive Collision Avoidance Using Dashcams(Ongoing)',
+        description:  "This research aims to improve traffic accident anticipation and drivable area forecasting for autonomous vehicles using dashcam video input. By employing advanced machine learning models like CNNs and LSTMs, the project seeks to enhance cross-dataset generalization and develop a real-time collision forecasting system, boosting the safety and decision-making of autonomous driving systems through predictive modeling and real-world testing.",
+        image: "https://drive.google.com/thumbnail?id=1eqtVDhm7NVDbYTvOLmCc6sqknwJ9O7qz",
+        scale: 1.4,
+        badges: ['machine-learning','deep-learning','python','google-vm','research'],
+        type:['research']
     },
     {
         title: 'Full-stack Email Management System. (Ongoing)',
@@ -39,7 +51,8 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1NixLg-S_jDk0x-NxyZyuLoDapMAuVLik",
         scale: 1,
         badges: ['javascript', 'react', 'bootstrap', 'html', 'css', 'nodejs', 'mysql', 'rest-api', 'jwt-authentication'],
-        link:'https://github.com/nimsara1999/EmailManagerJs'
+        link:'https://github.com/nimsara1999/EmailManagerJs',
+        type:['fullstack_mobile']
     },
     {
         title: 'Smart Home mobile app with Apple and Alexa',
@@ -47,7 +60,8 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1B4HctNpLEMHJs6X5CQ_DBUTSyMen58uk",
         scale: 1.15,
         badges: ['c++', 'esp32','wifi', 'mqtt', 'firebase', 'apple-homekit', 'amazon-alexa','java','android-studio'],
-        link:'https://github.com/nimsara1999/Smart_bulb'
+        link:'https://github.com/nimsara1999/Smart_bulb',
+        type:['fullstack_mobile','embedded']
     },
     {
         title: 'Bicycle Rent System',
@@ -55,7 +69,17 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1CaQspdOW_goyLADp8SgbXPCO6KHznerG",
         scale: 1.15,
         badges: ['c++', 'esp8266','wifi', 'rest-api', 'rfid','lcd-display'],   
-        link:'https://github.com/nimsara1999/Bicycle-Rent-System'
+        link:'https://github.com/nimsara1999/Bicycle-Rent-System',
+        type:['embedded']
+    },
+    {
+        title: 'Smart Medibox Project',
+        description:  "A medibox, which is use to store and protect medicines. User can set alarms to medicine times using web dashboard or inbuild OLED display. Medibox inside temperature, humidity, intensity monitoring system using Node-red live dashboard with MQTT brokers. Medibox intensity controlling system using LDR, special door and servo motors.",
+        image: "https://drive.google.com/thumbnail?id=1NRGW2wMLyjQdL5qTLpJXR08BCGVdE5y1",
+        scale: 1.15,
+        badges: ['c++', 'esp32','oled-display', 'sensors', 'wokwi','mqtt','node-red'],   
+        link:'https://wokwi.com/projects/363440445411658753',
+        type:['embedded']
     },
     {
         title: 'Portfolio Website',
@@ -63,7 +87,17 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1mR8-VRpUiLNDFXGXVLhrfVX07jVbXM8A",
         scale: 1.15,
         badges: ['javascript', 'react', 'bootstrap', 'html', 'css', 'responsive-design'],
-        link:'/'
+        link:'/',
+        type:['fullstack_mobile']
+    },
+    {
+        title: 'Robot Arm Control Project',
+        description:  "My batchmate and I developed a Rhino Robot Arm for EXMO'23 at the University of Moratuwa, Sri Lanka. We completely overhauled the old arm, replacing wires, encoders, and motors, and programmed it using microcontrollers. Each motor had encoders with two interrupt pins, requiring six Arduino Uno boards. We used I2C communication for control and implemented PID for smooth arm movements.",
+        image: "https://drive.google.com/thumbnail?id=1rZx8U8wwjF4y44eQaQqECYCBK6B1nzxA",
+        scale: 1.15,
+        badges: ['arduino', 'i2c-bus','pid', 'motor-drivers', 'robot-arm','encoders'],   
+        link:'https://www.linkedin.com/posts/nimsara-thisal-166513239_i-am-thrilled-to-announce-our-latest-achievement-activity-7092454856975667200-yssp?utm_source=li_share&utm_content=feedcontent&utm_medium=g_dt_web&utm_campaign=copy',
+        type:['embedded']
     },
     {
         title: 'Email Management System CLI',
@@ -71,7 +105,8 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1NixLg-S_jDk0x-NxyZyuLoDapMAuVLik",
         scale: 1,
         badges: ['java','oop','design-patterns','serialization','email-management'],
-        link:'https://github.com/nimsara1999/Email_manager1.java'
+        link:'https://github.com/nimsara1999/Email_manager1.java',
+        type:['fullstack_mobile']
     },
 ];
 

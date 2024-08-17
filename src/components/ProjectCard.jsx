@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ProjectCard.css'; // Import the CSS file
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
-const ProjectCard = ({ title, description, image, scale, badges, link }) => {
+const ProjectCard = ({ title, description, image, scale, badges, link, type, selectedType }) => {
     // Use object for multiple style changes
     const [style, setStyle] = useState({
         backgroundColor: 'rgba(247, 247, 247, 0.05)', // Fully transparent
@@ -38,6 +38,8 @@ const ProjectCard = ({ title, description, image, scale, badges, link }) => {
     };
 
     return (
+        <>
+        { type.includes(selectedType) || selectedType== 'all' ?
         <a
             href={link}
             target="_blank"
@@ -110,7 +112,10 @@ const ProjectCard = ({ title, description, image, scale, badges, link }) => {
                 </div>
             </div>
         </a>
+        :null}
+        </>
     );
+    
 };
 
 export default ProjectCard;

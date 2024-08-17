@@ -1,4 +1,4 @@
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 import './Home.css';  // Import the CSS file
 import AboutCard from '../components/AboutCard';
 import ProjectCard from '../components/ProjectCard';
@@ -57,13 +57,13 @@ const VisibleDiv = ({ id, children, handleVisibilityChange }) => {
 };
 
 
-
 class Home extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            currentID: 'list-item-1'
+            currentID: 'list-item-1',
+            selectedType: 'all'
         };
     }
     
@@ -252,8 +252,21 @@ class Home extends Component {
                 
                             <GitHubCalendar/>
 
+                            <div className="dropdown mb-3">
+                                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor:'#014c678c',fontSize:'14px' }}>
+                                    {this.state['selectedType'] === 'all' ? 'All Projects' : this.state['selectedType'] === 'fullstack_mobile' ? 'Mobile & Fullstack Projects': this.state['selectedType'] ===  'embedded' ? 'IOT & Embedded Projects' : this.state['selectedType'] ==='research' ? 'Research Projects' : 'null'}
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'all' })}>All Projects</button></li>
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'fullstack_mobile' })}>Mobile & Fullstack Projects</button></li>
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'embedded' })}>IOT & Embedded Projects</button></li>
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'research' })}>Research Projects</button></li>
+                                </ul>
+                            </div>
+
+
                         {projectData.map((project, index) => (
-                            <ProjectCard key={index} {...project} />
+                            <ProjectCard key={index} {...project} selectedType={this.state['selectedType']} />
                         ))}
 
                         <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
