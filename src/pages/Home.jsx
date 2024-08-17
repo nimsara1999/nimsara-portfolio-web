@@ -125,7 +125,7 @@ class Home extends Component {
                             cursor
                             cursorStyle='|'
                             typeSpeed={100}
-                            deleteSpeed={50}
+                            deleteSpeed={100}
                             delaySpeed={1000}
                         />
                     </h5>
@@ -145,32 +145,32 @@ class Home extends Component {
                         <a className="list-group-item list-group-item-action icon-link github" 
                         href="https://github.com/nimsara1999?tab=repositories" 
                         title="GitHub">
-                            <BsGithub style={{fontSize:30}} />
+                            <BsGithub style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link linkedin" 
                         href="https://www.linkedin.com/in/nimsara-thisal-166513239/" 
                         title="LinkedIn">
-                            <FaLinkedin style={{fontSize:30}} />
+                            <FaLinkedin style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link email" 
                         href="mailto:nimsarathisalgcc@gmail.com" 
                         title="Email: nimsarathisalgcc@gmail.com">
-                            <BsEnvelope style={{fontSize:30}} />
+                            <BsEnvelope style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link phone" 
                         href="tel:+94710880133" 
                         title="Call: +94710880133">
-                            <BsPhone style={{fontSize:28}} />
+                            <BsPhone style={{fontSize:26}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link fiverr" 
                         href="https://www.fiverr.com/s/bd5wKjX" 
                         title="Fiverr">
-                            <TbBrandFiverr style={{fontSize:30}} />
+                            <TbBrandFiverr style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link upwork" 
                         href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share" 
                         title="Upwork">
-                            <FaSquareUpwork style={{fontSize:30}} />
+                            <FaSquareUpwork style={{fontSize:28}} />
                         </a>
                     </div>
                     
@@ -198,7 +198,7 @@ class Home extends Component {
                             cursor
                             cursorStyle='|'
                             typeSpeed={100}
-                            deleteSpeed={50}
+                            deleteSpeed={100}
                             delaySpeed={1000}
                         />
                     </h6>

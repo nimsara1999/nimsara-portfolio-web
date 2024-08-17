@@ -14,17 +14,6 @@ const GitHubCalendar = () => {
         getContributions(api_key, 'nimsara1999')
     }, []);
 
-    const handleGithubContribCalendar = async () => {
-        try {
-            const response = await axios.get('https://github-contributions-api.jogruber.de/v4/nimsara1999');
-            const formattedData = convertToFormatB(response.data.contributions);
-            setContributionsData(formattedData);
-            console.log('GitHub Contributions Data:', formattedData);
-        } catch (error) {
-            console.error('There was an error making the get request:', error);
-        }
-    };
-
     async function getContributions(token, username) {
         const headers = {
             'Authorization': `bearer ${token}`,
@@ -82,8 +71,9 @@ const GitHubCalendar = () => {
     return (
         <>
             <a href='https://github.com/nimsara1999' className='contributions-link' target='_blank' rel='noopener noreferrer'>
-                <h6 className='custom-text-primary-1 mt-5'>My GitHub Contributions Chart.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
+                <h6 className='custom-text-primary-1 mt-5'>My GitHub Contributions.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
             </a>
+            <p className="card-text mt-2 mb-2 custom-text-secondary-2" style={{margin:0}}>These are my personal contributions, excluding company projects. This calendar is updated in real-time with the help of GitHub Developer APIs.</p>
             <div className="mb-5 d-none d-xl-block" style={{ marginLeft: -10, opacity: 0.7 }}>
                 
                 <ContributionCalendar
