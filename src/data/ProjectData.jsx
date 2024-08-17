@@ -32,7 +32,7 @@ const projectData = [
         title: 'Easy Boarding Place Finder Mobile-app',
         description: 'The Boarding Place Finder app leverages React Native for seamless mobile performance, integrating Google Maps for precise location tracking. It utilizes Firebase for backend services, ensuring robust data handling and user authentication. The app provides an intuitive user interface for easy navigation and efficient boarding place discovery.',
         image: "https://drive.google.com/thumbnail?id=1e6snZYlE8RAYNn9jTyQRIZYKxRFQ1i99",
-        scale: 1.5,
+        scale: 1.3,
         badges: ['ios','android','react-native', 'javascript', 'firestore', 'firebase-authentication' ,'google-maps api','google-cloud',],
         link:'https://github.com/nimsara1999/easyBoarding',
         type:['fullstack_mobile']
@@ -41,7 +41,7 @@ const projectData = [
         title: 'Predictive Collision Avoidance Using Dashcams(Ongoing)',
         description:  "This research aims to improve traffic accident anticipation and drivable area forecasting for autonomous vehicles using dashcam video input. By employing advanced machine learning models like CNNs and LSTMs, the project seeks to enhance cross-dataset generalization and develop a real-time collision forecasting system, boosting the safety and decision-making of autonomous driving systems through predictive modeling and real-world testing.",
         image: "https://drive.google.com/thumbnail?id=1eqtVDhm7NVDbYTvOLmCc6sqknwJ9O7qz",
-        scale: 1.4,
+        scale: 1.2,
         badges: ['machine-learning','deep-learning','python','google-vm','research'],
         type:['research']
     },

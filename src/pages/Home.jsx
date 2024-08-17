@@ -273,7 +273,7 @@ class Home extends Component {
                         <h4 className='mt-7 mb-3'>Contact Me -</h4>
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
-                        <p>Address: Madampe, Atakalanpanna, Sri-Lanka. (70294)</p>
+                        <p>Address: Madampe, Atakalanpanna, Sri Lanka.</p>
                         <div className="d-flex col-5 text-center mb-6">
                         <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
                             <BsGithub style={{fontSize:20}} />
