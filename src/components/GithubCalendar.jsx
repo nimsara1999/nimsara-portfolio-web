@@ -3,6 +3,7 @@ import './ProjectCard.css'; // Import the CSS file
 import { ContributionCalendar } from 'react-contribution-calendar';
 import moment from 'moment';
 import axios from 'axios';
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const GitHubCalendar = () => {
     const [contributionsData, setContributionsData] = useState([]);
@@ -57,7 +58,7 @@ const GitHubCalendar = () => {
         weeks.forEach(week => {
             week.contributionDays.forEach(day => {
                 const formattedDay = {
-                    [day.date]: { level: day.color }
+                    [day.date]: { level: day.contributionCount }
                 };
                 formatA.push(formattedDay);
             });
@@ -75,12 +76,15 @@ const GitHubCalendar = () => {
     };
 
     const today = moment().format('YYYY-MM-DD');
-    const eightMonthsAgo = moment().subtract(8, 'months').format('YYYY-MM-DD');
+    const eightMonthsAgo = moment().subtract(11, 'months').format('YYYY-MM-DD');
 
     return (
         <>
-            <div className="mt-5 mb-5 d-none d-xl-block" style={{ marginLeft: -10, opacity: 0.7 }}>
-                <h6>--  My GitHub Contributions Chart</h6>
+            <a href='https://github.com/nimsara1999' className='contributions-link' target='_blank' rel='noopener noreferrer'>
+                <h6 className='custom-text-primary-1 mt-5'>My GitHub Contributions Chart.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
+            </a>
+            <div className="mb-5 d-none d-xl-block" style={{ marginLeft: -10, opacity: 0.7 }}>
+                
                 <ContributionCalendar
                     data={contributionsData}
                     start={eightMonthsAgo}
@@ -90,16 +94,15 @@ const GitHubCalendar = () => {
                     startsOnSunday={true}
                     includeBoundary={true}
                     theme="grass"
-                    cx={13}
-                    cy={13}
+                    cx={10.1}
+                    cy={12}
                     cr={0}
                     onCellClick={(e, data) => console.log(data)}
                     scroll={false}
                 />
             </div>
 
-            <div className="mt-5 mb-5 d-none d-md-block d-xl-none" style={{ marginLeft: -10, opacity: 0.8 }}>
-                <h6>--  Live GitHub Contributions</h6>
+            <div className="mb-5 d-none d-md-block d-xl-none" style={{ marginLeft: -10, opacity: 0.8 }}>
                 <ContributionCalendar
                     data={contributionsData}
                     start={eightMonthsAgo}
@@ -109,7 +112,7 @@ const GitHubCalendar = () => {
                     startsOnSunday={true}
                     includeBoundary={true}
                     theme="grass"
-                    cx={10}
+                    cx={8}
                     cy={10}
                     cr={0}
                     onCellClick={(e, data) => console.log(data)}

@@ -26,11 +26,12 @@ const projectData = [
         link:"https://youtu.be/EcGdtz8JKoo"
     },
     {
-        title: 'Easy Boarding Place Finder Mobile-app (Need to release)',
+        title: 'Easy Boarding Place Finder Mobile-app',
         description: 'The Boarding Place Finder app leverages React Native for seamless mobile performance, integrating Google Maps for precise location tracking. It utilizes Firebase for backend services, ensuring robust data handling and user authentication. The app provides an intuitive user interface for easy navigation and efficient boarding place discovery.',
         image: "https://drive.google.com/thumbnail?id=1e6snZYlE8RAYNn9jTyQRIZYKxRFQ1i99",
         scale: 1.5,
         badges: ['ios','android','react-native', 'javascript', 'firestore', 'firebase-authentication' ,'google-maps api','google-cloud',],
+        link:'https://github.com/nimsara1999/easyBoarding'
     },
     {
         title: 'Full-stack Email Management System. (Ongoing)',
@@ -47,6 +48,14 @@ const projectData = [
         scale: 1.15,
         badges: ['c++', 'esp32','wifi', 'mqtt', 'firebase', 'apple-homekit', 'amazon-alexa','java','android-studio'],
         link:'https://github.com/nimsara1999/Smart_bulb'
+    },
+    {
+        title: 'Bicycle Rent System',
+        description:  "Developed a bicycle rental management system using RFID technology. The web app enables users to pay and rent bicycles seamlessly. Post-payment, users unlock bicycles via RFID tags, ensuring a secure and efficient rental experience. The project combines RFID with modern web development for a user-centric solution.",
+        image: "https://drive.google.com/thumbnail?id=1CaQspdOW_goyLADp8SgbXPCO6KHznerG",
+        scale: 1.15,
+        badges: ['c++', 'esp8266','wifi', 'rest-api', 'rfid','lcd-display'],   
+        link:'https://github.com/nimsara1999/Bicycle-Rent-System'
     },
     {
         title: 'Portfolio Website',

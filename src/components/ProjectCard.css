@@ -32,3 +32,9 @@
     font-weight: lighter;
 }
 
+.contributions-link:hover h6 {
+    color: #00d0ff; /* Replace with your desired hover color */
+}
+.contributions-link h6 {
+    transition: color 0.5s ease; /* Adjust the duration and timing function as needed */
+}
