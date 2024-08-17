@@ -4,13 +4,14 @@ import { ContributionCalendar } from 'react-contribution-calendar';
 import moment from 'moment';
 import axios from 'axios';
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import {api_key} from "../key"
 
 const GitHubCalendar = () => {
     const [contributionsData, setContributionsData] = useState([]);
 
     useEffect(() => {
         //handleGithubContribCalendar();
-        getContributions('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', 'nimsara1999')
+        getContributions(api_key, 'nimsara1999')
     }, []);
 
     const handleGithubContribCalendar = async () => {
@@ -58,7 +59,7 @@ const GitHubCalendar = () => {
         weeks.forEach(week => {
             week.contributionDays.forEach(day => {
                 const formattedDay = {
-                    [day.date]: { level: day.contributionCount }
+                    [day.date]: { level: day.contributionCount > 4? 4 : day.contributionCount }
                 };
                 formatA.push(formattedDay);
             });
