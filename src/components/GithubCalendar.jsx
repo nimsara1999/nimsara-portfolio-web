@@ -57,16 +57,11 @@ const GitHubCalendar = () => {
         setContributionsData(formatA);
         
     }
-    
-
-    const convertToFormatB = (formatAData) => {
-        return formatAData.slice(0, 300).map(item => ({
-            [item.date]: { level: item.level }
-        }));
-    };
 
     const today = moment().format('YYYY-MM-DD');
     const eightMonthsAgo = moment().subtract(11, 'months').format('YYYY-MM-DD');
+
+    
 
     return (
         <>
@@ -74,7 +69,7 @@ const GitHubCalendar = () => {
                 <h6 className='custom-text-primary-1 mt-5'>My GitHub Contributions.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
             </a>
             <p className="card-text mt-2 mb-2 custom-text-secondary-2" style={{margin:0}}>These are my personal contributions, excluding company projects. This calendar is updated in real-time with the help of GitHub Developer APIs.</p>
-            <div className="mb-5 d-none d-xl-block" style={{ marginLeft: -10, opacity: 0.7 }}>
+            <div className="mb-5 d-none d-xl-block" style={{ marginLeft: -12, opacity: 1 , zIndex:999}}>
                 
                 <ContributionCalendar
                     data={contributionsData}
@@ -84,16 +79,16 @@ const GitHubCalendar = () => {
                     textColor="white"
                     startsOnSunday={true}
                     includeBoundary={true}
-                    theme="grass"
+                    theme="dark_grass"
                     cx={10.1}
                     cy={12}
-                    cr={0}
+                    cr={2}
                     onCellClick={(e, data) => console.log(data)}
                     scroll={false}
                 />
             </div>
 
-            <div className="mb-5 d-none d-md-block d-xl-none" style={{ marginLeft: -10, opacity: 0.8 }}>
+            <div className="mb-5 d-none d-md-block d-xl-none" style={{ marginLeft: -12, opacity: 1 }}>
                 <ContributionCalendar
                     data={contributionsData}
                     start={eightMonthsAgo}
@@ -102,10 +97,10 @@ const GitHubCalendar = () => {
                     textColor="white"
                     startsOnSunday={true}
                     includeBoundary={true}
-                    theme="grass"
+                    theme="dark_grass"
                     cx={8}
                     cy={10}
-                    cr={0}
+                    cr={2}
                     onCellClick={(e, data) => console.log(data)}
                     scroll={false}
                 />

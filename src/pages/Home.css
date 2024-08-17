@@ -30,7 +30,7 @@ body, html, #root {
     pointer-events: none;
     transform: translate(-50%, -50%);
     border-radius: 80%;
-    z-index: 9999; /* Ensure it stays above all content */
+    z-index: 100; /* Ensure it stays above all content */
 }
 
 .img-fluid.double-size {
