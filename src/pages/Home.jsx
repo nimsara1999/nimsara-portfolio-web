@@ -235,7 +235,7 @@ class Home extends Component {
                         {about3}
                         </VisibleDiv>
                         <VisibleDiv className="mt-5" id="list-item-2" handleVisibilityChange={this.handleVisibilityChange}/>
-                            <h4 className='mt-5 mb-3'>- Background -</h4>
+                            <h4 className='mt-5 mb-3'>Background -</h4>
                             <div className="about-cards-container">
                                 {aboutData.map((about, index) => (
                                     <div className="about-card">
@@ -248,7 +248,7 @@ class Home extends Component {
                             
 
                         <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}/>
-                        <h4 className='mt-7 mb-3'>- Projects & Research -</h4>
+                        <h4 className='mt-7'>Projects & Research -</h4>
                 
                             <GitHubCalendar/>
 
@@ -270,7 +270,7 @@ class Home extends Component {
                         ))}
 
                         <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
-                        <h4 className='mt-7 mb-3'>- Contact Me -</h4>
+                        <h4 className='mt-7 mb-3'>Contact Me -</h4>
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
                         <p>Address: Madampe, Atakalanpanna, Sri-Lanka. (70294)</p>
