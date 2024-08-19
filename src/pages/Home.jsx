@@ -25,7 +25,7 @@ const about1 = (
 
 const about2 = (
     <p className="text-light-grey" style={{textAlign:'justify',marginRight:5}}>
-        I hold a <span className="tech-highlight">BSc Engineering Honours Degree in Computer Science and Engineering from the University of Moratuwa, Sri-Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and a <span className="tech-highlight">5 star rating on Fiverr and Upwork platforms</span>, underscoring my expertise across various technical domains.
+        I hold a <span className="tech-highlight">BSc Engineering Honours Degree in Computer Science and Engineering from the University of Moratuwa, Sri Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and a <span className="tech-highlight">5 star rating on Fiverr and Upwork platforms</span>, underscoring my expertise across various technical domains.
     </p>
 );
 
