@@ -32,7 +32,7 @@ const aboutData = [
         description: 'Freelancer - Five Star rated Embedded Systems and Fullstack developer at Upwork.',
         image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
         scale: 1,
-        badges: ["$1.4K+ earn", "2+ projects"],
+        badges: ["$1.9K+ earn", "3+ projects"],
     },
     {
         description: '3yr+ experience with IOT technologies.',
