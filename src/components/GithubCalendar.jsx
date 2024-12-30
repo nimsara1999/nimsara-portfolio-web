@@ -68,7 +68,7 @@ const GitHubCalendar = () => {
             <a href='https://github.com/nimsara1999' className='contributions-link' target='_blank' rel='noopener noreferrer'>
                 <h6 className='custom-text-primary-1 mt-4 mb-3'>My GitHub Contributions.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
             </a>
-            <p className="card-text mt-2 mb-2 custom-text-secondary-2 d-none d-xl-block" style={{margin:0}}>Note: These are my personal github contributions including private repositories. This calendar is updated in real-time with the help of GitHub Developer APIs.</p>
+            <p className="card-text mt-2 mb-2 text-light-grey d-none d-xl-block" style={{margin:0}}>Note: These are my personal github contributions including private repositories. This calendar is updated in real-time with the help of GitHub Developer APIs.</p>
             
             <div className="mb-5 d-none d-xl-block" style={{ marginLeft: -12, opacity: 1 , zIndex:999}}>
 

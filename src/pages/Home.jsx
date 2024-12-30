@@ -16,6 +16,7 @@ import { Carousel, ScrollSpy } from 'bootstrap'; // Import ScrollSpy from bootst
 import Chatbot from '../components/ChatBot/Chatbot';
 import { Typewriter, Cursor } from 'react-simple-typewriter';
 import GitHubCalendar from '../components/GithubCalendar';
+import { BsFillStarFill } from "react-icons/bs";
 
 
 const about1 = (
@@ -140,6 +141,7 @@ class Home extends Component {
                     <div id="list-example">
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-1" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>- About</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
+                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-5" style={currentID==='list-item-5'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Reviews</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-4" style={currentID==='list-item-4'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Contact</a>
                     </div>
                     <div className="d-flex mt-9 col-8" >
@@ -182,8 +184,8 @@ class Home extends Component {
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
                     <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white'}:{color:'#959caf'}}>About</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-2" style={currentID==='list-item-2'?{color:'white'}:{color:'#959caf'}} >Background</a>
                     <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={currentID==='list-item-3'?{color:'white'}:{color:'#959caf'}}>Projects</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-5" style={currentID==='list-item-5'?{color:'white'}:{color:'#959caf'}}>Reviews</a>
                     <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={currentID==='list-item-4'?{color:'white'}:{color:'#959caf'}}>Contact</a>
                 </div>
 
@@ -252,7 +254,6 @@ class Home extends Component {
 
                         <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}>
                         <h4 className='mt-7'>Projects & Research</h4>
-                        </VisibleDiv>
                             <GitHubCalendar/>
 
                             <div className="dropdown mb-3">
@@ -266,7 +267,7 @@ class Home extends Component {
                                     <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'research' })}>Research Projects</button></li>
                                 </ul>
                             </div>
-
+                            </VisibleDiv>
 
                         {projectData.map((project, index) => (
                             <ProjectCard key={index} {...project} selectedType={this.state['selectedType']} />
@@ -274,9 +275,15 @@ class Home extends Component {
 
 
                         <VisibleDiv className="mt-5" id="list-item-5" handleVisibilityChange={this.handleVisibilityChange}></VisibleDiv>
-                        <h4 className='mt-7 mb-4'>Reviews and Feedback</h4>
+                        <h4 className='mt-7 mb-3'>Reviews and Feedback</h4>
+                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                            <p className="card-text mt-3 mb-4 text-light-grey justify-content-center">I have successfully completed numerous full-stack and IoT projects on freelancing platforms, consistently delivering high-quality results. My work has earned me excellent reviews from clients, reflecting their satisfaction and trust in my expertise.</p>
 
-                                    <div id="carouselExampleRide" class="carousel carousel-dark slide ms-1 me-4" data-bs-ride="true">
+                                    <div id="carouselExampleRide" class="carousel carousel-dark slide ms-1 me-4" data-bs-ride="true" style={{ minHeight: '275px' }}>
                                     <div className="carousel-inner me-4">
                                         <div class="carousel-item active" data-bs-interval="4000"> <img src={reviewData[0].url} class="d-block rounded w-100" alt="..."/></div>
                                         <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[1].url} class="d-block rounded w-100" alt="..."/></div>
