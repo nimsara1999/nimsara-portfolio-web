@@ -39,7 +39,7 @@ body, html, #root {
 }
 
 .mt-6 {
-    margin-top: 16rem; 
+    margin-top: 15rem; 
 }
 
 .mt-7 {
@@ -50,14 +50,10 @@ body, html, #root {
 }
 
 .mb-6 {
-    margin-bottom: 16rem; 
+    margin-bottom: 8rem; 
 }
 .mt-9{
-    margin-top: 7rem;
-}
-
-.mb-7 {
-    margin-bottom: 7rem; 
+    margin-top: 10rem;
 }
 
 .mb-8 {
@@ -106,3 +102,13 @@ body, html, #root {
     color: #ffffff; /* GitHub color */
 }
 
+
+#carouselExampleRide {
+    min-height: 275px;
+}
+
+@media (max-width: 576px) {
+    #carouselExampleRide {
+        min-height: 180px;
+    }
+}

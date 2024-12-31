@@ -45,9 +45,9 @@ const ProjectCard = ({ title, description, image, scale, badges, link, type, sel
             target="_blank"
             rel="noopener noreferrer"
             className="text-decoration-none"
-        >
+        >  
             <div
-                className="card m-1 d-none d-md-block"
+                className="card m-1 d-none d-md-block mt-3"
                 style={{
                     width: '96%',
                     transition: 'all 0.5s', // Smooth transition for all properties

@@ -26,13 +26,13 @@ const aboutData = [
         description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
         image: 'https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png',
         scale: 1,
-        badges: ["$500+ earn", "9+ projects"],
+        badges: ["$1k+ earn", "10+ projects"],
     },
     {
         description: 'Freelancer - Five Star rated Embedded Systems and Fullstack developer at Upwork.',
         image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
         scale: 1,
-        badges: ["$1.9K+ earn", "3+ projects"],
+        badges: ["$1.9K+ earn", "4+ projects"],
     },
     {
         description: '3yr+ experience with IOT technologies.',

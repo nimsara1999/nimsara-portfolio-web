@@ -17,6 +17,7 @@ import Chatbot from '../components/ChatBot/Chatbot';
 import { Typewriter, Cursor } from 'react-simple-typewriter';
 import GitHubCalendar from '../components/GithubCalendar';
 import { BsFillStarFill } from "react-icons/bs";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 
 const about1 = (
@@ -68,6 +69,8 @@ class Home extends Component {
             selectedType: 'all'
         };
     }
+
+    
     
     componentDidMount() {
         const spotlight = document.querySelector('.spotlight');
@@ -140,8 +143,8 @@ class Home extends Component {
 
                     <div id="list-example">
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-1" style={currentID==='list-item-1'?{color:'white', marginLeft:15}:{color:'#959caf'}}>- About</a>
-                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-5" style={currentID==='list-item-5'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Reviews</a>
+                        <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-4" style={currentID==='list-item-4'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Contact</a>
                     </div>
                     <div className="d-flex mt-9 col-8" >
@@ -184,8 +187,9 @@ class Home extends Component {
                 {/* Navigation bar */}
                 <div id="list-example" className="d-md-none row-12 d-flex justify-content-around text-center mb-3 mt-3">
                     <a className={`list-group-item list-group-item-action `} href="#list-item-0" style={currentID==='list-item-1'?{color:'white'}:{color:'#959caf'}}>About</a>
-                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={currentID==='list-item-3'?{color:'white'}:{color:'#959caf'}}>Projects</a>
                     <a className={`list-group-item list-group-item-action `} href="#list-item-5" style={currentID==='list-item-5'?{color:'white'}:{color:'#959caf'}}>Reviews</a>
+                    <a className={`list-group-item list-group-item-action `} href="#list-item-3" style={currentID==='list-item-3'?{color:'white'}:{color:'#959caf'}}>Projects</a>
+
                     <a className={`list-group-item list-group-item-action `} href="#list-item-4" style={currentID==='list-item-4'?{color:'white'}:{color:'#959caf'}}>Contact</a>
                 </div>
 
@@ -238,56 +242,38 @@ class Home extends Component {
                         {about3}
                         
                         
-                        
-                            <h4 className='mt-5 mb-3'>Background</h4>
-                            </VisibleDiv>
-                            <div className="about-cards-container">
-                                {aboutData.map((about, index) => (
-                                    <div className="about-card">
-                                        <AboutCard key={index} {...about} />
-                                    </div>
-                                ))}
-                            </div>
+                        <h4 className='mt-5 mb-3'>Background</h4>
+                        </VisibleDiv>
+                        <div className="about-cards-container">
+                            {aboutData.map((about, index) => (
+                                <div className="about-card">
+                                    <AboutCard key={index} {...about} />
+                                </div>
+                            ))}
+                        </div>
 
 
-                            
-
-                        <VisibleDiv className="mt-5" id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}>
-                        <h4 className='mt-7'>Projects & Research</h4>
-                            <GitHubCalendar/>
-
-                            <div className="dropdown mb-3">
-                                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor:'#014c678c',fontSize:'14px' }}>
-                                    {this.state['selectedType'] === 'all' ? 'All Projects' : this.state['selectedType'] === 'fullstack_mobile' ? 'Mobile & Fullstack Projects': this.state['selectedType'] ===  'embedded' ? 'IOT & Embedded Projects' : this.state['selectedType'] ==='research' ? 'Research Projects' : 'null'}
-                                </button>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'all' })}>All Projects</button></li>
-                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'fullstack_mobile' })}>Mobile & Fullstack Projects</button></li>
-                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'embedded' })}>IOT & Embedded Projects</button></li>
-                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'research' })}>Research Projects</button></li>
-                                </ul>
-                            </div>
-                            </VisibleDiv>
-
-                        {projectData.map((project, index) => (
-                            <ProjectCard key={index} {...project} selectedType={this.state['selectedType']} />
-                        ))}
-
-
-                        <VisibleDiv className="mt-5" id="list-item-5" handleVisibilityChange={this.handleVisibilityChange}></VisibleDiv>
-                        <h4 className='mt-7 mb-3'>Reviews and Feedback</h4>
-                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
-                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
-                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
-                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
-                        <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                    <VisibleDiv id="list-item-5" handleVisibilityChange={this.handleVisibilityChange}>
+                        <div className='mt-9'/>
+                            <h4 className='mb-3'>Reviews and Feedback</h4>
+                            <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                            <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                            <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                            <BsFillStarFill className='me-1' style={{color:'yellow'}} />
+                            <BsFillStarFill className='me-1' style={{color:'yellow'}} />
                             <p className="card-text mt-3 mb-4 text-light-grey justify-content-center">I have successfully completed numerous full-stack and IoT projects on freelancing platforms, consistently delivering high-quality results. My work has earned me excellent reviews from clients, reflecting their satisfaction and trust in my expertise.</p>
+                            <a href='https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share' className='contributions-link' target='_blank' rel='noopener noreferrer'>
+                                    <h6 className='custom-text-primary-1'>Reviews on Upwork platform.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
+                                </a>
+                                <a href='https://www.fiverr.com/s/bd5wKjX' className='contributions-link' target='_blank' rel='noopener noreferrer'>
+                                     <h6 className='custom-text-primary-1 mt-4 mb-4'>Reviews on Fiverr platform.  <BsBoxArrowUpRight style={{fontSize:13,marginBottom:'5'}}/> </h6>
+                                </a>
 
-                                    <div id="carouselExampleRide" class="carousel carousel-dark slide ms-1 me-4" data-bs-ride="true" style={{ minHeight: '275px' }}>
-                                    <div className="carousel-inner me-4">
+                                    <div id="carouselExampleRide" className="carousel carousel-dark slide ms-1 me-4 bg-white rounded" data-bs-ride="true">
+                                    <div className="carousel-inner me-4 rounded">
                                         <div class="carousel-item active" data-bs-interval="4000"> <img src={reviewData[0].url} class="d-block rounded w-100" alt="..."/></div>
                                         <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[1].url} class="d-block rounded w-100" alt="..."/></div>
-                                        <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[2].url} class="d-block rounded w-100" alt="..."/></div>
+                                        <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[2].url} class="d-block rounded w-100 " alt="..."/></div>
                                         <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[3].url} class="d-block rounded w-100" alt="..."/></div>
                                         <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[4].url} class="d-block rounded w-100" alt="..."/></div>
                                         <div class="carousel-item" data-bs-interval="4000"> <img src={reviewData[5].url} class="d-block rounded w-100" alt="..."/></div>
@@ -303,12 +289,41 @@ class Home extends Component {
                                         <span class="visually-hidden">Next</span>
                                     </button>
                                     </div>
+                                    </VisibleDiv>
 
-                        <VisibleDiv className="mt-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
-                        <h4 className='mt-7 mb-3'>Contact Me</h4>
+ 
+
+
+
+                            
+
+                    <VisibleDiv id="list-item-3" handleVisibilityChange={this.handleVisibilityChange}>
+                        <h4 className='mt-6'>Projects & Research</h4>
+                            <GitHubCalendar/>
+
+                            <div className="dropdown mb-3">
+                                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor:'#014c678c',fontSize:'14px' }}>
+                                    {this.state['selectedType'] === 'all' ? 'All Projects' : this.state['selectedType'] === 'fullstack_mobile' ? 'Mobile & Fullstack Projects': this.state['selectedType'] ===  'embedded' ? 'IOT & Embedded Projects' : this.state['selectedType'] ==='research' ? 'Research Projects' : 'null'}
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'all' })}>All Projects</button></li>
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'fullstack_mobile' })}>Mobile & Fullstack Projects</button></li>
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'embedded' })}>IOT & Embedded Projects</button></li>
+                                    <li><button className="dropdown-item" type="button" onClick={() => this.setState({ selectedType: 'research' })}>Research Projects</button></li>
+                                </ul>
+                            </div>
+                    </VisibleDiv>
+
+                        {projectData.map((project, index) => (
+                            <ProjectCard key={index} {...project} selectedType={this.state['selectedType']} />
+                        ))}
+
+                        <VisibleDiv className="mb-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
+                        <h4 className='mt-9 mb-3'>Contact Me</h4>
                         <p>Email: nimsarathisalgcc@gmail.com</p>
                         <p>Mobile: +94710880133</p>
                         <p>Address: Madampe, Ratnapura, Sri Lanka.</p>
+                        
                         <div className="d-flex col-5 text-center mb-6">
                         <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
                             <BsGithub style={{fontSize:20}} />
@@ -329,7 +344,8 @@ class Home extends Component {
                             <FaSquareUpwork style={{fontSize:20}} />
                         </a>
                     </div>
-                    </VisibleDiv>
+                    
+                        </VisibleDiv>
                     </div>
 
                     </div>
