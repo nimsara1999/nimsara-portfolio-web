@@ -39,7 +39,7 @@ const AboutCard = ({description, image, scale, badges }) => {
         <div
             className="card m-1 d-none d-md-block"
             style={{
-                width: '16.5rem',
+                width: '15rem',
                 transition: 'all 0.5s', // Smooth transition for all properties
                 ...style // Spread the style object here
             }}
@@ -52,7 +52,7 @@ const AboutCard = ({description, image, scale, badges }) => {
                         src={image}
                         className="card-img-top"
                         alt="Card Image"
-                        style={{ transform: `scale(${scale})`, marginLeft: '1rem'}}
+                        style={{ transform: `scale(${scale})`, marginLeft: '0.6rem'}}
                     />
                 </div>
                 <div className="col">
@@ -63,6 +63,7 @@ const AboutCard = ({description, image, scale, badges }) => {
                 </div>
             </div>
         </div>
+
 
         <div
             className="card m-1 d-md-none"
