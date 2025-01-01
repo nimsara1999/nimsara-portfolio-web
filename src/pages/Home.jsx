@@ -129,8 +129,8 @@ class Home extends Component {
                             loop={0}
                             cursor
                             cursorStyle='_'
-                            typeSpeed={120}
-                            deleteSpeed={120}
+                            typeSpeed={100}
+                            deleteSpeed={100}
                             delaySpeed={1000}
                         />
                     </h5>
