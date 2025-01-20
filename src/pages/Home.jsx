@@ -150,13 +150,7 @@ class Home extends Component {
                             target="_blank"
                             href="https://drive.google.com/file/d/1sSWPcJtMJztdsVywupiI5fYR_xJf-C-s/view?usp=sharing" 
                             title="CV">
-                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">view cv |></button>
-                        </a>
-                        <a className="list-group-item list-group-item-action icon-link cv-download" 
-                            target="_blank"
-                            href="https://drive.google.com/file/d/16NNLW_to7vedRpB5vBRT4M3ZTqFFJcRt/view?usp=sharing" 
-                            title="Employment Certificate">
-                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">service letter</button>
+                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">download cv</button>
                         </a>
                     </div>
 
@@ -257,7 +251,7 @@ class Home extends Component {
                                 target="_blank"
                                 href="https://drive.google.com/file/d/1sSWPcJtMJztdsVywupiI5fYR_xJf-C-s/view?usp=sharing" 
                                 title="CV">
-                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">view cv |></button>
+                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">view cv -></button>
                             </a>
                             <a className="list-group-item list-group-item-action icon-link cv-download" 
                                 target="_blank"
@@ -275,6 +269,7 @@ class Home extends Component {
                         {about1}
                         {about2}
                         {about3}
+
                         <h4 className='mt-5 mb-3'>Background</h4>
                         </VisibleDiv>
 
