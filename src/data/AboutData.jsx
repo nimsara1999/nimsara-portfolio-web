@@ -35,16 +35,16 @@ const aboutData = [
         badges: ["$1.9K+ earn", "4+ jobs"],
     },
     {
-        description: '3yr+ experience with IOT and embedded system development technologies.',
+        description: '3.5yr+ experience with embedded system development technologies.',
         image: 'https://static.vecteezy.com/system/resources/previews/026/428/284/original/smart-home-3d-icon-smart-home-system-concept-internet-of-things-iot-smart-home-and-network-connect-concept-png.png',
         scale: 1.7,
-        badges: ["microcontroller", "C++", "mqtt", "sensor", "actuator", "nodered", 'BLE', "wifi","protocols"],
+        badges: ["esp32","RPi", "C++", "arduino","nodered", "sensors", "actuators","mqtt", 'ble', "wifi","i2c","spi"],
     },
     {
-        description: '2.5yr+ experience with fullstack & mobile technologies.',
+        description: '3yr+ experience with fullstack & mobile technologies.',
         image: 'https://drive.google.com/thumbnail?id=1yOw8d4Lxns4hDyz6eqQWS3JfjzmhK_Qp',
         scale: 1.6,
-        badges: ["react", "html", "css", "native", "javascript",'jwt', "python", "java","mysql", "springboot", "firebase"],
+        badges: ["react", "html", "css", "react-native", "javascript", "python", "flask","java","mysql","postgresql", "firebase", "springboot",'jwt'],
     },
     {
         description: 'Project Management & Software Engineering Background.',
