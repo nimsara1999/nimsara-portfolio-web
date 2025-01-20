@@ -2,12 +2,12 @@
 
 const aboutData = [
     {
-        description: 'BSc.Engineering CSE, University of Moratuwa, Sri Lanka',
+        description: 'BSc Eng Hons, Computer Science & Eng, University of Moratuwa, Sri Lanka',
         image: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png',
         scale: 1.2,
     },
     {
-        description: 'GCE(A/L) Examination 2019, AAA (Island Rank-7)',
+        description: 'G.C.E.(A/L) Examination 2019 (Physical Science), AAA | Island Rank 7',
         image: 'https://grace-academy.in/wp-content/uploads/2022/04/man-with-laptop-showing-ok-gesture-4927667-4122903.png',
         scale: 1.65,
     },

@@ -64,6 +64,12 @@ body, html, #root {
     color: white; /* Initial color */
     transition: color 0.3s ease; /* Smooth transition */
 }
+.icon-link.cv-download {
+    color: #959caf; /* LinkedIn color */
+}
+.icon-link.cv-download:hover {
+    color: #ffffff; /* LinkedIn color */
+}
 .icon-link.linkedin {
     color: #959caf; /* LinkedIn color */
 }

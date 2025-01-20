@@ -11,10 +11,10 @@ const projectData = [
     },
     {
         title: "Smart Gas Project - Overleap (Pvt) Ltd.",
-        description: "Developed firmware for an IoT gateway with a React Native mobile app, managing the team, UI design, Google Maps integration, authentication, API handling, and wifi communication stabilization.",
+        description: "Developed firmware for an IoT gateway with a React Native mobile app, managing the team, UI design, Google Maps integration, authentication, API handling, and wifi communication stabilization.\n\nOverleap Pvt Ltd is developing this gateway and configuration mobile application for gas company in Cambodia and introducing their IoT SaaS platform to users. I am very happy to collaborate with them on this innovative project.",
         image: "https://drive.google.com/thumbnail?id=1qb6jWkreqFOsWVxshHwcCwn_snw31zn2",
         scale: 1,
-        badges: ['react-native', 'javascript', 'google-maps ', 'platformIO', 'esp32','ble','wifi'],
+        badges: ['react-native', 'javascript', 'android','google-maps ', 'platformIO', 'esp32','ble','wifi'],
         type:['fullstack_mobile','embedded']
     },
     {
@@ -63,10 +63,10 @@ const projectData = [
     },
     {
         title: 'Predictive Collision Avoidance Using Dashcams(Ongoing)',
-        description:  "This research aims to improve traffic accident anticipation and drivable area forecasting for autonomous vehicles using dashcam video input. By employing advanced machine learning models like CNNs and LSTMs, the project seeks to enhance cross-dataset generalization and develop a real-time collision forecasting system, boosting the safety and decision-making of autonomous driving systems through predictive modeling and real-world testing.",
+        description:  "This research focuses on enhancing traffic accident anticipation and drivable area forecasting for autonomous vehicles utilizing dashcam video inputs. By leveraging advanced machine learning frameworks, the project aims to improve cross-dataset generalization and develop a real-time collision forecasting system, thereby enhancing the predictive capabilities and decision-making processes of autonomous driving systems through predictive modeling and rigorous real-world evaluation. \n My Contribution: Developed a drivable area prediction module for future frames in autonomous vehicles by integrating OpenSTL and YOLOPv2 models. This work improved real-time forecasting accuracy, segmentation performance, and decision-making efficiency, contributing to enhanced safety and navigation in autonomous driving systems.",
         image: "https://drive.google.com/thumbnail?id=1eqtVDhm7NVDbYTvOLmCc6sqknwJ9O7qz",
         scale: 1.2,
-        badges: ['machine-learning','deep-learning','python','google-vm','research'],
+        badges: ['machine-vision','python','google-vm','kaggle','pytorch','research'],
         type:['research']
     },
     {

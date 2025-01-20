@@ -22,13 +22,13 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const about1 = (
     <p className="text-light-grey mt-8" style={{textAlign:'justify',marginRight:5}}>
-        I'm a <span className="tech-highlight">full-stack and embedded systems engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
+        I'm a <span className="tech-highlight">Full-stack, Mobile Applications and embedded systems engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
     </p>
 );
 
 const about2 = (
     <p className="text-light-grey" style={{textAlign:'justify',marginRight:5}}>
-        I hold a <span className="tech-highlight">BSc Engineering Honours Degree in Computer Science and Engineering from the University of Moratuwa, Sri Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and a <span className="tech-highlight">5 star rating on Fiverr and Upwork freelancing platforms</span>, underscoring my expertise across various technical domains.
+        I am pursuing a <span className="tech-highlight">BSc Engineering Hons Degree in Computer Science and Engineering from the University of Moratuwa, Sri Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and <span className="tech-highlight">five-star ratings on </span> Fiverr and Upwork <span className="tech-highlight">freelancing platforms</span>, highlighting my expertise across various technical domains.
     </p>
 );
 
@@ -96,15 +96,12 @@ class Home extends Component {
     handleScroll = (event) => {
         const rightColumn = document.querySelector('.right-column');
         if (rightColumn) {
-            // Check if the wheel event should scroll the right column or propagate naturally
-            if ((event.deltaY < 0 && rightColumn.scrollTop === 0) || // Scrolling up at the top
-                (event.deltaY > 0 && rightColumn.scrollTop === rightColumn.scrollHeight - rightColumn.offsetHeight)) { // Scrolling down at the bottom
-                // Allow default browser scroll if at the limits of the content
-                event.stopPropagation(); // Stop the event from propagating to other elements
+            if ((event.deltaY < 0 && rightColumn.scrollTop === 0) ||
+                (event.deltaY > 0 && rightColumn.scrollTop === rightColumn.scrollHeight - rightColumn.offsetHeight)) { 
+                event.stopPropagation();
             } else {
-                // Otherwise, perform custom scroll and prevent the default scroll
                 rightColumn.scrollTop += event.deltaY;
-                event.preventDefault(); // Prevent the browser's default scroll
+                event.preventDefault();
             }
         }
     }
@@ -147,13 +144,32 @@ class Home extends Component {
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-3" style={currentID==='list-item-3'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Projects</a>
                         <a className="list-group-item list-group-item-action mb-2" href="#list-item-4" style={currentID==='list-item-4'?{color:'white',marginLeft:15}:{color:'#959caf'}}>- Contact</a>
                     </div>
+
+                    <div className="d-flex mt-4 col-6" >
+                        <a className="list-group-item list-group-item-action icon-link cv-download" 
+                            target="_blank"
+                            href="https://drive.google.com/file/d/1sSWPcJtMJztdsVywupiI5fYR_xJf-C-s/view?usp=sharing" 
+                            title="CV">
+                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">view cv |></button>
+                        </a>
+                        <a className="list-group-item list-group-item-action icon-link cv-download" 
+                            target="_blank"
+                            href="https://drive.google.com/file/d/16NNLW_to7vedRpB5vBRT4M3ZTqFFJcRt/view?usp=sharing" 
+                            title="Employment Certificate">
+                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">service letter</button>
+                        </a>
+                    </div>
+
+
                     <div className="d-flex mt-9 col-8" >
                         <a className="list-group-item list-group-item-action icon-link github" 
+                        target="_blank"
                         href="https://github.com/nimsara1999?tab=repositories" 
                         title="GitHub">
                             <BsGithub style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link linkedin" 
+                        target="_blank"
                         href="https://www.linkedin.com/in/nimsara-thisal-166513239/" 
                         title="LinkedIn">
                             <FaLinkedin style={{fontSize:28}} />
@@ -169,11 +185,13 @@ class Home extends Component {
                             <BsPhone style={{fontSize:26}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link fiverr" 
+                        target="_blank"
                         href="https://www.fiverr.com/s/bd5wKjX" 
                         title="Fiverr">
                             <TbBrandFiverr style={{fontSize:28}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link upwork" 
+                        target="_blank"
                         href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share" 
                         title="Upwork">
                             <FaSquareUpwork style={{fontSize:28}} />
@@ -214,36 +232,52 @@ class Home extends Component {
                         style={{ borderRadius: '50%',  boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgba(247, 247, 247, 0.1)' }}
                     />
                     <div className="d-flex mt-5 col-8 offset-2 text-center">
-                        <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
+                        <a className="list-group-item list-group-item-action icon-link github" target="_blank" href="https://github.com/nimsara1999?tab=repositories">
                             <BsGithub style={{fontSize:20}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link linkedin" href="https://www.linkedin.com/in/nimsara-thisal-166513239/">
+                        <a className="list-group-item list-group-item-action icon-link linkedin" target="_blank" href="https://www.linkedin.com/in/nimsara-thisal-166513239/">
                             <FaLinkedin style={{fontSize:20}} />
                         </a>
                         <a className="list-group-item list-group-item-action icon-link email" href="mailto:nimsarathisalgcc@gmail.com">
                             <BsEnvelope style={{fontSize:20}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link phone" href="tel:+94710880133">
+                        <a className="list-group-item list-group-item-action icon-link phone"  href="tel:+94710880133">
                             <BsPhone style={{fontSize:18}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link fiverr" href="https://www.fiverr.com/s/bd5wKjX">
+                        <a className="list-group-item list-group-item-action icon-link fiverr" target="_blank" href="https://www.fiverr.com/s/bd5wKjX">
                             <TbBrandFiverr style={{fontSize:20}} />
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link upwork" href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share">
+                        <a className="list-group-item list-group-item-action icon-link upwork" target="_blank" href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share">
                             <FaSquareUpwork style={{fontSize:20}} />
                         </a>
                     </div>
+                    <div className="d-flex justify-content-center align-items-center mt-4">
+                        <div className="d-flex col-6 ps-2">
+                            <a className="list-group-item list-group-item-action icon-link cv-download" 
+                                target="_blank"
+                                href="https://drive.google.com/file/d/1sSWPcJtMJztdsVywupiI5fYR_xJf-C-s/view?usp=sharing" 
+                                title="CV">
+                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">view cv |></button>
+                            </a>
+                            <a className="list-group-item list-group-item-action icon-link cv-download" 
+                                target="_blank"
+                                href="https://drive.google.com/file/d/16NNLW_to7vedRpB5vBRT4M3ZTqFFJcRt/view?usp=sharing" 
+                                title="Employment Certificate">
+                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">service let.</button>
+                            </a>
+                        </div>
+                    </div>
+
                     </div>
 
                     <div className='col-sm-8'>
-                    <VisibleDiv className="mb-5"  id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}>
+                        <VisibleDiv className="mb-5"  id="list-item-1" handleVisibilityChange={this.handleVisibilityChange}>
                         {about1}
                         {about2}
                         {about3}
-                        
-                        
                         <h4 className='mt-5 mb-3'>Background</h4>
                         </VisibleDiv>
+
                         <div className="about-cards-container">
                             {aboutData.map((about, index) => (
                                 <div className="about-card">
@@ -289,7 +323,7 @@ class Home extends Component {
                                         <span class="visually-hidden">Next</span>
                                     </button>
                                     </div>
-                                    </VisibleDiv>
+                    </VisibleDiv>
 
  
 
@@ -319,31 +353,32 @@ class Home extends Component {
                         ))}
 
                         <VisibleDiv className="mb-5" id="list-item-4" handleVisibilityChange={this.handleVisibilityChange}>
-                        <h4 className='mt-9 mb-3'>Contact Me</h4>
-                        <p>Email: nimsarathisalgcc@gmail.com</p>
-                        <p>Mobile: +94710880133</p>
-                        <p>Address: Madampe, Ratnapura, Sri Lanka.</p>
-                        
-                        <div className="d-flex col-5 text-center mb-6">
-                        <a className="list-group-item list-group-item-action icon-link github" href="https://github.com/nimsara1999?tab=repositories">
-                            <BsGithub style={{fontSize:20}} />
+                        <h4 className='mt-9 mb-4'>Contact Me</h4>
+
+                        <a className="list-group-item list-group-item-action icon-link email mb-3" href="mailto:nimsarathisalgcc@gmail.com" >
+                            <BsEnvelope className='me-2' style={{fontSize:20}} />
+                            nimsarathisalgcc@gmail.com
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link linkedin" href="https://www.linkedin.com/in/nimsara-thisal-166513239/">
-                            <FaLinkedin style={{fontSize:20}} />
+                        <a className="list-group-item list-group-item-action icon-link phone mb-3" href="tel:+94710880133" >
+                            <BsPhone className='me-2' style={{fontSize:20}} />
+                            +94 71 088 0133
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link email" href="mailto:nimsarathisalgcc@gmail.com">
-                            <BsEnvelope style={{fontSize:20}} />
+                        <a className="list-group-item list-group-item-action icon-link github mb-3" target="_blank" href="https://github.com/nimsara1999?tab=repositories">
+                            <BsGithub className='me-2' style={{fontSize:20}} />
+                            github.com/nimsara1999
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link phone" href="tel:+94710880133">
-                            <BsPhone style={{fontSize:18}} />
+                        <a className="list-group-item list-group-item-action icon-link linkedin mb-3" target="_blank" href="https://www.linkedin.com/in/nimsara-thisal-166513239/">
+                            <FaLinkedin className='me-2' style={{fontSize:20}} />
+                            linkedin.com/in/nimsata-thisal
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link fiverr" href="https://www.fiverr.com/s/bd5wKjX">
-                            <TbBrandFiverr style={{fontSize:20}} />
+                        <a className="list-group-item list-group-item-action icon-link fiverr mb-3" target="_blank" href="https://www.fiverr.com/s/bd5wKjX">
+                            <TbBrandFiverr className='me-2' style={{fontSize:20}} />
+                            fiverr.com/nimsaraparamulla
                         </a>
-                        <a className="list-group-item list-group-item-action icon-link upwork" href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share">
-                            <FaSquareUpwork style={{fontSize:20}} />
+                        <a className="list-group-item list-group-item-action icon-link upwork mb-6" target="_blank" href="https://www.upwork.com/freelancers/~01fc1fa3f32baa3d67?mp_source=share">
+                            <FaSquareUpwork className='me-2' style={{fontSize:20}} />
+                            upwork.com/nimsaraparamulla
                         </a>
-                    </div>
                     
                         </VisibleDiv>
                     </div>
