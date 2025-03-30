@@ -22,13 +22,13 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const about1 = (
     <p className="text-light-grey mt-8" style={{textAlign:'justify',marginRight:5}}>
-        I'm a <span className="tech-highlight">Full-stack, Mobile Applications and embedded systems engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
+        I'm a <span className="tech-highlight">Full-stack, Mobile Applications and Embedded Systems Engineer</span>. My skills and experiences span with frontend, backend technologies, project management tools, and IoT integrations using diverse microcontrollers, actuators, sensors and different types of protocols. I deliver innovative and cost-effective solutions tailored to each project.
     </p>
 );
 
 const about2 = (
     <p className="text-light-grey" style={{textAlign:'justify',marginRight:5}}>
-        I am pursuing a <span className="tech-highlight">BSc Engineering Hons Degree in Computer Science and Engineering from the University of Moratuwa, Sri Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and <span className="tech-highlight">five-star ratings on </span> Fiverr and Upwork <span className="tech-highlight">freelancing platforms</span>, highlighting my expertise across various technical domains.
+        I am pursuing a <span className="tech-highlight">BSc Engineering Hons Degree in Computer Science and Engineering from the University of Moratuwa, Sri Lanka</span>, specializing in Integrated Computer Engineering. My professional experience includes a role as a Trainee <span className="tech-highlight">Software Engineer at Circles.Life Technologies</span> and <span className="tech-highlight">five-star ratings on Fiverr (Level One Developer) and Upwork (Top Rated Developer)  </span><span className="tech-highlight"></span>freelancing platforms, highlighting my expertise across various technical domains.
     </p>
 );
 
@@ -150,7 +150,7 @@ class Home extends Component {
                             target="_blank"
                             href="https://drive.google.com/file/d/1sSWPcJtMJztdsVywupiI5fYR_xJf-C-s/view?usp=sharing" 
                             title="CV">
-                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">download cv</button>
+                                <button type="button" class="btn btn-outline-info btn-sm rounded-4">Download CV</button>
                         </a>
                     </div>
 
@@ -251,13 +251,13 @@ class Home extends Component {
                                 target="_blank"
                                 href="https://drive.google.com/file/d/1sSWPcJtMJztdsVywupiI5fYR_xJf-C-s/view?usp=sharing" 
                                 title="CV">
-                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">view cv -></button>
+                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">View CV</button>
                             </a>
                             <a className="list-group-item list-group-item-action icon-link cv-download" 
                                 target="_blank"
                                 href="https://drive.google.com/file/d/16NNLW_to7vedRpB5vBRT4M3ZTqFFJcRt/view?usp=sharing" 
                                 title="Employment Certificate">
-                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">service let.</button>
+                                    <button type="button" class="btn btn-outline-info btn-sm rounded-4">Service doc</button>
                             </a>
                         </div>
                     </div>

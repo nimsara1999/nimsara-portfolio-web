@@ -15,6 +15,7 @@ const projectData = [
         image: "https://drive.google.com/thumbnail?id=1qb6jWkreqFOsWVxshHwcCwn_snw31zn2",
         scale: 1,
         badges: ['react-native', 'javascript', 'android','google-maps ', 'platformIO', 'esp32','ble','wifi'],
+        link: "https://apps.apple.com/us/app/smartgas/id6742742839",
         type:['fullstack_mobile','embedded']
     },
     {

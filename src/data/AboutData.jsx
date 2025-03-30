@@ -23,22 +23,22 @@ const aboutData = [
         badges: ["full-stack", "mobile","iot"],
     },
     {
-        description: 'Freelancer - Five Star rated IOT based Fullstack developer at Fiverr.',
+        description: 'Freelancer - Level One IOT based Fullstack developer at Fiverr.',
         image: 'https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png',
         scale: 1,
         badges: ["$1k+ earn", "11+ jobs"],
     },
     {
-        description: 'Freelancer - Five Star rated Embedded Systems & Fullstack dev. at Upwork.',
+        description: 'Freelancer - Top Rated Embedded Systems & Fullstack dev. at Upwork.',
         image: 'https://cdn.worldvectorlogo.com/logos/upwork-roundedsquare-1.svg',
         scale: 1,
-        badges: ["$1.9K+ earn", "4+ jobs"],
+        badges: ["$2.5K+ earn", "4+ jobs"],
     },
     {
-        description: '3.5yr+ experience with embedded system development technologies.',
+        description: '4yr+ experience with embedded system development technologies.',
         image: 'https://static.vecteezy.com/system/resources/previews/026/428/284/original/smart-home-3d-icon-smart-home-system-concept-internet-of-things-iot-smart-home-and-network-connect-concept-png.png',
         scale: 1.7,
-        badges: ["esp32","RPi", "C++", "arduino","nodered", "sensors", "actuators","mqtt", 'ble', "wifi","i2c","spi"],
+        badges: ["TUYA","esp32","RPi", "C++", "arduino","nodered", "sensors", "actuators","mqtt", 'ble', "wifi","i2c","spi"],
     },
     {
         description: '3yr+ experience with fullstack & mobile technologies.',
